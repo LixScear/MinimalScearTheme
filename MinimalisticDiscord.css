@@ -90,11 +90,11 @@
     --bg-opacity: 100%;
     
     /* Background suggestions */
-    --wallpaper: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Light.png");
+    --wallpaper: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Life-Death.png");
 
     /* LightDark background selection */
-    --modern-dark-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Dark.png");
     --modern-light-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Light.png");
+    --modern-dark-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Dark.png");
 }
 
 /* ============================================
