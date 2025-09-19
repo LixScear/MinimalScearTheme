@@ -1,0 +1,30 @@
+/* ============================================
+   BOTTOM SERVER LIST POSITIONING
+   ============================================ */
+
+   /* Push content up instead of down */
+   /* Simply comments surrounding code to disable it. */
+.content_c48ade {
+	margin-top: unset;
+	margin-bottom: var(--custom-guild-list-width);
+}
+#app-mount {
+	.guilds_c48ade {
+		top: calc(100% + var(--custom-guild-list-width));
+	}
+}
+
+// BetterFolders - Vencord
+.container_c48ade > div[style]:not(.base_c48ade) {
+	bottom: calc(var(--custom-guild-list-width) * 2);
+	top: unset;
+
+	.guilds_c48ade {
+		top: calc(100% + var(--custom-guild-list-width) * 2) !important;
+	}
+
+	& + .base_c48ade .content_c48ade {
+		margin-top: unset;
+		margin-bottom: calc(var(--custom-guild-list-width) * 2);
+	}
+}

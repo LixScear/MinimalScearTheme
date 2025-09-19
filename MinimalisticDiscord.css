@@ -66,11 +66,8 @@
 /* Radial status */
 @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
 
-
-
-/* ============================================
-   ADDITIONAL ADDONS (OPTIONAL)
-   ============================================ */
+/* Horizontal Server List - Bottom */
+@import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/bottomhsl.css");
 
 /* Hide annoying elements (nitro, shop, sticker picker, etc.) */
 /* Remove the comment markers to enable */
@@ -95,6 +92,9 @@
     /* LightDark background selection */
     --modern-light-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Light.png");
     --modern-dark-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Dark.png");
+
+    --HSL-server-direction: column; /* Direction of the server list. | OPTIONS: column, column-reverse | DEFAULT: column */
+	--HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
 }
 
 /* ============================================
