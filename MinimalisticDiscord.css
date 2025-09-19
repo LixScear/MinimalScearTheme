@@ -51,20 +51,20 @@
    ============================================ */
 
 /* Entry point From Minimalistic.css */
-@import url("https://Lixscear.github.io/LixScearTheme/Minimalistic.css");
+@import url("https://Lixscear.github.io/MinimalScearTheme/Minimalistic.css");
 
 /* ============================================
    REMOVABLE ADDONS
    ============================================
 
 /* Server users bar */
-@import url("https://Lixscear.github.io/LixScearTheme/Module/ServerAddions.css");
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
 
 /* Folder redesign */
-@import url("https://Lixscear.github.io/LixScearTheme/Module/ServerAddions.css");
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
 
 /* Radial status */
-@import url("https://Lixscear.github.io/LixScearTheme/Module/StatusIndicater.css");
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
 
 
 
@@ -74,7 +74,7 @@
 
 /* Hide annoying elements (nitro, shop, sticker picker, etc.) */
 /* Remove the comment markers to enable */
-@import url("https://Lixscear.github.io/LixScearTheme/Module/DiscordAnoints.css");
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordAnoints.css");
 
 /* ============================================
     ROOT VARIABLES
