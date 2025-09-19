@@ -1,0 +1,103 @@
+/* ============================================
+   DISCORD EMBEDS STYLING
+   ============================================
+   Custom styling for Discord message embeds including:
+   - Embed border radius and appearance
+   - Code block backgrounds
+   - Embed container styling and shadows
+   - Custom embed line effects and gradients
+   ============================================ */
+
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
+:root {
+    --embed-border-radius: 5px;
+}
+
+/* ============================================
+   EMBED CODE BLOCKS
+   ============================================ */
+
+/* Code block background - Dark theme */
+html.theme-dark .embed__623de code {
+    background: rgb(51, 50, 53);
+}
+
+/* Code block background - Light theme */
+html.theme-light .embed__623de code {
+    background: rgb(221, 221, 221);
+}
+
+/* ============================================
+   EMBED CONTAINER STYLING
+   ============================================ */
+
+/* Remove default embed borders */
+.embedFull__623de {
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+/* Embed container background and shadow - Dark theme */
+html.theme-dark .embedFull__623de {
+    background: rgb(51, 50, 53);
+    box-shadow: 2px 2px 8px rgb(42, 42, 46);
+}
+
+/* Embed container background and shadow - Light theme */
+html.theme-light .embedFull__623de {
+    background: rgb(221, 221, 221);
+    box-shadow: 2px 2px 8px rgb(199, 199, 199);
+}
+
+/* Embed grid z-index */
+.grid__623de {
+    z-index: 1;
+}
+
+/* ============================================
+   CUSTOM EMBED LINE EFFECTS
+   ============================================ */
+
+/* Base styling for embed line pseudo-elements */
+.embedFull__623de:after,
+.embedFull__623de:before {
+    content: "";
+    height: 100%;
+    width: var(--embed-line-width);
+    position: absolute;
+    top: 0;
+}
+
+/* Embed line gradient effect - Dark theme */
+html.theme-dark .embedFull__623de:after {
+    background: linear-gradient(to right, transparent, rgb(51, 50, 53));
+}
+
+/* Embed line gradient effect - Light theme */
+html.theme-light .embedFull__623de:after {
+    background: linear-gradient(to right, transparent, rgb(221, 221, 221));
+}
+
+/* Embed line z-index (applies to all themes) */
+.embedFull__623de:after {
+    z-index: -3;
+}
+
+/* Embed line opacity and z-index (applies to all themes) */
+.embedFull__623de:before {
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Embed line solid background - Dark theme */
+html.theme-dark .embedFull__623de:before {
+    background: rgb(51, 50, 53);
+}
+
+/* Embed line solid background - Light theme */
+html.theme-light .embedFull__623de:before {
+    background: rgb(221, 221, 221);
+}
