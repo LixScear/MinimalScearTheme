@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LixScear Discord Theme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('CustomizableWallpapers/BG-Life-Death.png') center/cover no-repeat fixed;
+            color: #000000;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 0;
+            padding: 60px 40px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 100;
+            margin-bottom: 20px;
+            color: #000000;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            color: #333333;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .theme-info {
+            background: rgba(0, 0, 0, 0.03);
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            padding: 40px;
+            margin: 40px 0;
+        }
+        
+        .theme-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #000000;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .theme-info p {
+            color: #444444;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff;
+            padding: 15px 40px;
+            text-decoration: none;
+            border: 2px solid #000000;
+            font-weight: 300;
+            margin: 10px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        
+        .download-btn:hover {
+            background: #ffffff;
+            color: #000000;
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature {
+            background: rgba(0, 0, 0, 0.02);
+            padding: 30px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature h3 {
+            color: #000000;
+            margin-bottom: 15px;
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        
+        .feature p {
+            color: #333333;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        
+        .author-info {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(0, 0, 0, 0.1);
+            color: #666666;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .author-info p {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>L i x S c e a r</h1>
+        <p class="subtitle">Minimalistic Discord Theme</p>
+        
+        <div class="theme-info">
+            <h2>Professional Discord Theme</h2>
+            <p>A comprehensive Discord theme featuring complete transparency, modern designs, and enhanced user interface elements. Clean, minimal, and professional.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Complete Transparency</h3>
+                <p>Full transparency system with customizable blur effects and modern glass-morphism design for a clean, minimal aesthetic.</p>
+            </div>
+            <div class="feature">
+                <h3>Modern Button Design</h3>
+                <p>Custom button styling with smooth animations and professional appearance that enhances the overall user experience.</p>
+            </div>
+            <div class="feature">
+                <h3>BetterDiscord Integration</h3>
+                <p>Seamless integration with BetterDiscord addons and enhanced functionality for power users.</p>
+            </div>
+            <div class="feature">
+                <h3>Responsive Design</h3>
+                <p>Optimized for all screen sizes with adaptive layouts and smooth transitions across all devices.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 50px;">
+            <a href="MinimalisticDiscord.css" class="download-btn" download>Download Theme</a>
+            <a href="https://github.com/LixScear/MinimalScearTheme" class="download-btn" target="_blank">GitHub</a>
+        </div>
+
+        <div class="author-info">
+            <p><strong>Author:</strong> L i x S c e a r</p>
+            <p><strong>Version:</strong> 1.0.0</p>
+            <p>Made with precision for the Discord community</p>
+        </div>
+    </div>
+</body>
+</html>

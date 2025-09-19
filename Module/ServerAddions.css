@@ -1,0 +1,243 @@
+/* ============================================
+   SERVER ADDITIONS - COLLAPSIBLE MEMBER LIST & FOLDER STYLING
+   ============================================ */
+
+/* ============================================
+   CSS VARIABLES & CORE FUNCTIONALITY
+   ============================================ */
+
+.membersWrap_c8ffbb {
+    /* Smooth transition for collapse/expand animation */
+    transition: transform 0.5s ease;
+    
+    /* Calculate collapsed width: avatar (32px) + padding (16px each side) + extra space */
+    --member-list-collapsed-width: calc(32px + 2 * (16px + var(--space-xs)));
+    
+    /* Calculate how much to transform to collapse the list */
+    --member-list-collapsed-transform: calc((var(--custom-member-list-width) - var(--member-list-collapsed-width)));
+    
+    /* Apply collapse transform */
+    margin-left: calc(-1 * var(--member-list-collapsed-transform));
+    transform: translateX(var(--member-list-collapsed-transform));
+    
+    /* Make the list fill the full window height */
+    height: 100%;
+}
+
+/* Expand member list on hover */
+.membersWrap_c8ffbb:hover {
+    transform: none;
+}
+
+/* ============================================
+   MEMBER LIST CONTAINER STYLING
+   ============================================ */
+
+.members_c8ffbb {
+    /* Ensure proper layering */
+    z-index: 1;
+    
+    /* Transparent background by default */
+    background-color: #0000;
+    
+    /* Smooth transitions for all changes */
+    transition: 0.5s ease;
+}
+
+/* Add padding when not hovering (collapsed state) */
+div:not(:hover) > .members_c8ffbb > div {
+    padding-top: 10px;
+}
+
+/* Styling when member list is expanded (hovered) */
+.members_c8ffbb:hover {
+    /* Rounded corners on the left side */
+    border-radius: var(--memberlist-border-radius) 0 0 var(--memberlist-border-radius);
+    
+    /* Add bottom margin for spacing */
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   THEME-SPECIFIC BACKGROUND GRADIENTS
+   ============================================ */
+
+/* Light theme gradient background */
+.theme-light .members_c8ffbb:hover {
+    background: linear-gradient(
+        90deg, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 255, 255, 1) 30%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+}
+
+/* Dark theme gradient background */
+.theme-dark .members_c8ffbb:hover {
+    background: linear-gradient(
+        90deg, 
+        rgba(0, 0, 0, 1) 0%, 
+        rgba(0, 0, 0, 1) 30%, 
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+/* ============================================
+   MEMBER GROUP HEADERS
+   ============================================ */
+
+.membersGroup_c8ffbb {
+    /* Smooth padding transition for headers */
+    transition: padding 0.5s ease;
+}
+
+/* Adjust header padding when collapsed */
+.membersWrap_c8ffbb:not(:hover) .membersGroup_c8ffbb {
+    padding-left: 2px;
+}
+
+/* ============================================
+   INDIVIDUAL MEMBER STYLING
+   ============================================ */
+
+.member__5d473 {
+    /* Transparent background for members */
+    background-color: transparent;
+}
+
+/* ============================================
+   ACTIVITY WIDGET POSITIONING
+   ============================================ */
+
+.contentImage__42bf5 {
+    /* Smooth transform transition for activity icons */
+    transition: transform 0.5s ease;
+}
+
+/* Reposition activity widget when collapsed */
+.membersWrap_c8ffbb:not(:hover) .contentImage__42bf5 {
+    /* Complex calculation to center the activity icon in collapsed view */
+    transform: translateX(calc(
+        18px - var(--custom-member-list-width) + var(--member-list-collapsed-width) - 
+        ((var(--member-list-collapsed-width) - 48px) / 2)
+    ));
+}
+
+/* ============================================
+   MEMBER CONTAINER STYLING
+   ============================================ */
+
+.container__0f2e8 {
+    /* Smooth transitions for background and border */
+    transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+/* Hide container styling when collapsed */
+.membersWrap_c8ffbb:not(:hover) .container__0f2e8 {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.container__7641b {
+    /* Force transparent background and no border */
+    background: transparent !important;
+    border: none !important;
+}
+
+/* ============================================
+   MEMBER INFO SECTIONS
+   ============================================ */
+
+.infoSection__0f2e8 {
+    /* Smooth opacity transition for info sections */
+    transition: opacity 0.5s ease;
+}
+
+/* Hide info sections when collapsed */
+.membersWrap_c8ffbb:not(:hover) .infoSection__0f2e8 {
+    opacity: 0;
+}
+
+/* ============================================
+   USERNAME CONTENT FADING
+   ============================================ */
+
+.content__91a9d {
+    /* Smooth opacity transition for usernames */
+    transition: opacity 0.5s ease;
+}
+
+/* Fade out usernames when member list is collapsed */
+.membersWrap_c8ffbb:not(:hover) .content__91a9d {
+    opacity: 0;
+}
+
+/* ============================================
+   VENCORD MEMBER COUNT ADDON FIXES
+   ============================================ */
+
+/* Adjust member count widget positioning when collapsed */
+.members_c8ffbb:not(:hover) .vc-membercount-widget {
+    margin-bottom: -16px;
+}
+
+/* Hide member count dots when collapsed */
+.members_c8ffbb:not(:hover) .vc-membercount-online-dot,
+.members_c8ffbb:not(:hover) .vc-membercount-total-dot {
+    display: none !important;
+}
+
+/* Adjust member count list layout when collapsed */
+.members_c8ffbb:not(:hover) > .vc-membercount-member-list > div {
+    box-sizing: border-box !important;
+    flex: 1 0 100%;
+}
+
+.members_c8ffbb:not(:hover) > .vc-membercount-member-list {
+    flex-wrap: wrap;
+}
+
+
+/* ============================================
+   SERVER FOLDER STYLING
+   ============================================ */
+
+/* Hide folder preview overlay */
+.folderPreview__48112 {
+    display: none;
+}
+
+/* Remove transform from expanded folder icon wrapper */
+.expandedFolderIconWrapper__48112 {
+    transform: none !important;
+}
+
+/* Custom folder icon styling with pseudo-elements */
+.folderPreviewWrapper__48112:not([style=""]):before, 
+.folderPreviewWrapper__48112:not([style=""]):after {
+    /* Position pseudo-elements absolutely */
+    position: absolute;
+    content: "";
+    
+    /* Set icon dimensions */
+    width: 24px;
+    height: 24px;
+    
+    /* Center the icon */
+    inset: 0;
+    margin: auto;
+    
+    /* Inherit background color from parent */
+    background-color: inherit;
+    
+    /* Apply folder SVG mask */
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    
+    /* Enhance visual appearance */
+    filter: brightness(1.2) saturate(1.1);
+    
+    /* Position below the folder */
+    bottom: -45px;
+}

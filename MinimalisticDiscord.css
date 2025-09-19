@@ -1,0 +1,275 @@
+/* ============================================
+    DISCORD THEME
+   ============================================
+   @name L i x S c e a r
+   @author L i x S c e a r
+   @version 1.0.0
+
+    Minimalistic Discord Theme
+                      __
+                     /  \
+                    |    |
+(`----._____.-'"""`. \__/ .'"""`-._____.----')
+ (____       .      `|  |'      .       ____)
+   (___`----' .     _|  |_     . `----'___)
+     (__`----'  _.-' |  | `-._  `----'__)
+       `._____.'_    |  |    _`._____.'
+              /o )-< |  | >-( o\
+             / .'    |  |    `. \
+            J J      |  |      L L
+            | |      |  |      | |
+            J J      |  |      F F
+             \ \     |  |     / /
+              \ `.   |  |   .' /
+               `. `-.|  |.-' .'
+                 `-. |.-' .-'
+                   .-' .-'.
+                 .' .-' |. `.
+                / .' |  | `. \
+               / /   |  |   \ \
+              J J    |  |    L L
+              | |    |  |    | |
+              J J    |  |    F F
+               \ `.  |  |  .' /
+                `. `-|  !-' .'
+                  `-.!-' .-'
+                   .' .-|`.
+                  / .|  |. \
+                 J J |  | L L
+                 | | |  | | |
+                 J J |  | F F
+                  `.\|  |/.'
+                    `|  |'
+                     |  |
+                     |  |
+                     |  |
+                     `--'
+   ============================================ */
+
+/* ============================================
+   MAIN THEME IMPORTS
+   ============================================ */
+
+/* Entry point From Minimalistic.css */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Minimalistic.css");
+
+/* ============================================
+   REMOVABLE ADDONS
+   ============================================
+
+/* Server users bar */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
+
+/* Folder redesign */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
+
+/* Radial status */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
+
+/* Horizontal Server List - Bottom */
+@import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/bottomhsl.css");
+
+/* Hide annoying elements (nitro, shop, sticker picker, etc.) */
+/* Remove the comment markers to enable */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordAnoints.css");
+
+/* ============================================
+    ROOT VARIABLES
+   ============================================ */
+
+:root {
+    /* ============================================
+       BACKGROUND IMAGES
+       ============================================ */
+    
+    /* Main background image */
+    --background-image: var(--wallpaper);
+    --bg-opacity: 100%;
+    
+    /* Background suggestions */
+    --wallpaper: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Life-Death.png");
+
+    /* LightDark background selection */
+    --modern-light-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Light.png");
+    --modern-dark-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Dark.png");
+
+    --HSL-server-direction: column; /* Direction of the server list. | OPTIONS: column, column-reverse | DEFAULT: column */
+	--HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
+}
+
+/* ============================================
+   WINDOW STYLING - DARK MODE
+   ============================================ */
+
+:root.theme-dark {
+    --window-margin: 20px; /* Must be above 20px */
+    --window-colour: #0009;
+    --window-blur: 5px;
+    --window-border-radius: 10px;
+    --sidebar-colour: rgb(36, 36, 36);
+}
+
+/* ============================================
+   WINDOW STYLING - LIGHT MODE
+   ============================================ */
+
+:root.theme-light {
+    --window-margin: 20px; /* Must be above 20px */
+    --window-colour: rgba(255, 255, 255, 0.6);
+    --window-blur: 5px;
+    --window-border-radius: 10px;
+    --sidebar-colour: rgb(209, 209, 209);
+}
+
+/* ============================================
+   GLOBAL ROOT VARIABLES
+   ============================================ */
+
+:root {
+    /* ============================================
+       USER CUSTOMIZATION
+       ============================================ */
+    
+    --user-name: "Matt";
+    --edited-message: " EDITED ✎ ";
+    --font-name: Poppins;
+    --font-size: 12px;
+    --group-chat-font: "Monoton"; /* Group chat default font */
+    
+    /* ============================================
+       RADIAL STATUS GLOW SETTINGS
+       ============================================ */
+    
+    /* Spacing (must end in px) */
+    --rs-small-spacing: 0px;
+    --rs-large-spacing: 0px;
+    --rs-medium-spacing: 0px;
+    
+    /* Width settings */
+    --rs-small-width: 2.5px;
+    --rs-medium-width: 3.5px;
+    --rs-large-width: 4.5px;
+    
+    /* Avatar shape */
+    --rs-avatar-shape: 50%;
+    
+    /* Status colors */
+    --rs-online-color: #1df594;
+    --rs-idle-color: #faa61a;
+    --rs-dnd-color: #f04747;
+    --rs-offline-color: #636b75;
+    --rs-streaming-color: #643da7;
+    --rs-invisible-color: #636b75;
+    
+    /* Phone visibility */
+    --rs-phone-visible: block; /* Change to `none` to disable mobile icon */
+    --rs-phone-color: var(--rs-online-color);
+    
+    /* ============================================
+       ACCENT COLORS
+       ============================================ */
+    
+    /* For accent color to take full effect, change both values */
+    --accentcolor: 206, 206, 206; /* RGB values */
+    --accentcolorV2: #6626B6; /* Hex value */
+    
+    /* ============================================
+       SETTINGS MODAL CONFIGURATION
+       ============================================ */
+    
+    --themelightsettingsmodalbackground: rgb(223, 223, 223);
+    --themedarksettingsmodalbackground: rgb(51, 49, 53);
+    --settingsmodalwidth: 960px;
+    --settingsmodalheight: 80vh;
+    
+    /* ============================================
+       MEMBER LIST STYLING
+       ============================================ */
+
+    /*Only in `px`, `rem`, `em` */
+    --memberlist-border-radius: 10px;
+    
+    /* ============================================
+       CUSTOM PLACEHOLDER TEXTS
+       ============================================ */
+    
+    /* Input field placeholder */
+    --input-field: "To Meow, or not to Meow";
+    
+    /* Locked channel placeholder */
+    --input-field-locked: "Access Denied";
+    
+    /* Typing indicators */
+    --input-typing-indicator-one-person: "Message in progress...please wait";
+    --input-typing-indicator-many-person: "are composing messages";
+    
+    /* ============================================
+       SCROLLER CUSTOMIZATION
+       ============================================ */
+    
+    --scroller-color: transparent; /* Change to hex color to make visible */
+    
+    /* ============================================
+       SPOTIFY PLAYER CONTROL
+       ============================================ */
+    
+    /* Change the URL to your preferred GIF */
+    /* --spotify-control-squid-gif-url: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/0c/Glow_Squid_BE1.gif"; */
+    
+    /* Adjust dimensions accordingly */
+    --spotify-control-squid-width: 25px;
+    --spotify-control-squid-height: 25px;
+}
+
+/* ============================================
+   DISCORD TRANSPARENCY - DARK THEME
+   ============================================ */
+
+.theme-dark {
+    --background-message-hover: rgba(255, 255, 255, 0.055);
+    --header-primary: #fff;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #9d9d9d;
+    --channels-default: #8e9297;
+    --interactive-normal: #b9bbbe;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4f545c;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-tertiary: transparent;
+    --background-accent: rgb(36, 36, 36);
+    --activity-card-background: transparent;
+    --deprecated-panel-background: transparent;
+}
+
+/* ============================================
+   DISCORD TRANSPARENCY - LIGHT THEME
+   ============================================ */
+
+.theme-light {
+    --background-message-hover: rgba(255, 255, 255, 0.055);
+    --header-primary: rgb(0, 0, 0);
+    --header-secondary: #3f3f3f;
+    --text-normal: #303030;
+    --text-muted: #333333;
+    --channels-default: #585b5e;
+    --interactive-normal: #3a3a3a;
+    --interactive-hover: #333333;
+    --interactive-active: rgb(0, 0, 0);
+    --interactive-muted: #4f545c;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-tertiary: transparent;
+    --background-accent: rgb(27, 27, 27);
+    --activity-card-background: transparent;
+    --deprecated-panel-background: transparent;
+}
+
+/* ============================================
+   PERMISSIONS 
+   ============================================ */
+
+/*PERMISSIONS: You do not have the rights to use my theme on other projects
+

@@ -1,0 +1,118 @@
+/* ============================================
+   EMOJIS, GIFS & STICKERS STYLING
+   ============================================
+   Custom styling for Discord's emoji picker interface including:
+   - Emoji/GIF/Sticker tab backgrounds and blur effects
+   - Navigation tab styling and hover effects
+   - Emoji selection and shortcut styling
+   - Inspector and container layouts
+   ============================================ */
+
+/* ============================================
+   EMOJI PICKER CONTAINER BACKGROUNDS
+   ============================================ */
+
+/* Main emoji picker container with blur effect */
+.drawerSizingWrapper__08434,
+.wrapper_c0e32c {
+    backdrop-filter: blur(15px) !important;
+    border-radius: 5px;
+}
+
+/* Emoji picker background - Dark theme */
+html.theme-dark .drawerSizingWrapper__08434,
+html.theme-dark .wrapper_c0e32c {
+    background: #18191ba6 !important;
+}
+
+/* Emoji picker background - Light theme */
+html.theme-light .drawerSizingWrapper__08434,
+html.theme-light .wrapper_c0e32c {
+    background: #d4def1a6 !important;
+}
+
+/* Disable double background in emoji/gif/sticker tab menu */
+.drawerSizingWrapper__08434 .wrapper_c0e32c {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border-radius: 0;
+}
+
+/* ============================================
+   EMOJI SELECTION & SHORTCUTS
+   ============================================ */
+
+/* Unicode shortcut background - Dark theme */
+html.theme-dark .unicodeShortcut_b9ee0c,
+html.theme-dark .standardStickerShortcut__3ad28 {
+    background: #292b2f;
+}
+
+/* Unicode shortcut background - Light theme */
+html.theme-light .unicodeShortcut_b9ee0c,
+html.theme-light .standardStickerShortcut__3ad28 {
+    background: #ebedef;
+}
+
+/* Selected emoji item background */
+.emojiItem_fc7141.emojiItemSelected_fc7141 {
+    background-color: #18191b90;
+}
+
+/* ============================================
+   NAVIGATION TABS STYLING
+   ============================================ */
+
+/* Navigation tab base styling */
+.nav__08434 > .navList__08434 > button {
+    flex: auto;
+    bottom: 20px;
+    line-height: 45px;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* Navigation tab background - Dark theme */
+html.theme-dark .nav__08434 > .navList__08434 > button {
+    background: #333135;
+}
+
+/* Navigation tab background - Light theme */
+html.theme-light .nav__08434 > .navList__08434 > button {
+    background: #ebedef;
+}
+
+/* Navigation tab hover effects - Dark theme */
+html.theme-dark .nav__08434 > .navList__08434 > button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Navigation tab hover effects - Light theme */
+html.theme-light .nav__08434 > .navList__08434 > button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation container padding */
+.nav__08434 {
+    padding: 0;
+}
+
+/* ============================================
+   INSPECTOR & LAYOUT COMPONENTS
+   ============================================ */
+
+/* Inspector container styling */
+.inspector_c0e32c {
+    border-radius: 8px;
+    margin: 10px;
+    width: 95%;
+}
+
+/* Unicode shortcut container styling */
+.unicodeShortcut_b9ee0c {
+    border-radius: 8px;
+    margin: 12px;
+    margin-left: 5px;
+    top: 330px !important;
+    width: 85%;
+}
