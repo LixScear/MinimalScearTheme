@@ -10,6 +10,8 @@
    ============================================ */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Minimalistic.css");
 
+   @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/main.scss");
+
    /* ============================================
       REMOVABLE ADDONS
       ============================================
@@ -24,10 +26,10 @@
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
    
    /* Horizontal Server List Top */
-   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/HorizontalServerListTop.css"); */
+   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerBottom.scss"); */
    
    /* Horizontal Server List Bottom */
-   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/HorizontalServerListBottom.css"); */
+   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerBottom.scss"); */
    
    /* Hide annoying elements (nitro, shop, sticker picker, etc.) */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordElement.css");
@@ -189,6 +191,16 @@
        /* Adjust dimensions accordingly */
        --spotify-control-squid-width: 25px;
        --spotify-control-squid-height: 25px;
+       
+       /* ============================================
+          HORIZONTAL SERVER LIST CONFIGURATION
+          ============================================ */
+       
+       --HSL-server-direction: column-reverse; /* Direction: column, column-reverse */
+       --HSL-server-alignment: flex-start; /* Alignment: flex-start, center, flex-end */
+       --HSL-top-padding: var(--size-sm); /* Bottom padding for server list */
+       --notices-height: 36px;
+       --serverlist-offset: var(--custom-guild-list-width);
    }
    
    /* ============================================
