@@ -5,47 +5,6 @@
    @author L i x S c e a r
    @version 1.0.0
 
-    Minimalistic Discord Theme
-                      __
-                     /  \
-                    |    |
-(`----._____.-'"""`. \__/ .'"""`-._____.----')
- (____       .      `|  |'      .       ____)
-   (___`----' .     _|  |_     . `----'___)
-     (__`----'  _.-' |  | `-._  `----'__)
-       `._____.'_    |  |    _`._____.'
-              /o )-< |  | >-( o\
-             / .'    |  |    `. \
-            J J      |  |      L L
-            | |      |  |      | |
-            J J      |  |      F F
-             \ \     |  |     / /
-              \ `.   |  |   .' /
-               `. `-.|  |.-' .'
-                 `-. |.-' .-'
-                   .-' .-'.
-                 .' .-' |. `.
-                / .' |  | `. \
-               / /   |  |   \ \
-              J J    |  |    L L
-              | |    |  |    | |
-              J J    |  |    F F
-               \ `.  |  |  .' /
-                `. `-|  !-' .'
-                  `-.!-' .-'
-                   .' .-|`.
-                  / .|  |. \
-                 J J |  | L L
-                 | | |  | | |
-                 J J |  | F F
-                  `.\|  |/.'
-                    `|  |'
-                     |  |
-                     |  |
-                     |  |
-                     `--'
-   ============================================ */
-
 /* ============================================
    MAIN THEME IMPORTS
    ============================================ */
@@ -63,6 +22,9 @@
 
 /* Radial status */
 @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
+
+/* Horizontal Server List - Core */
+@import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/HorizontalServerList.css");
 
 /* Horizontal Server List - Bottom */
 @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/bottomhsl.css");
