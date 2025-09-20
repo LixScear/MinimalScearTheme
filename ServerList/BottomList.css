@@ -1,71 +1,83 @@
 /* ============================================
-   BOTTOM HORIZONTAL SERVER LIST ADDON
+   BOTTOM HORIZONTAL SERVER LIST - CORE FUNCTIONALITY
    ============================================
    
-   This CSS addon works with HorizontalServerList.css to move
-   the horizontal server list to the bottom of Discord.
-   
-   IMPORTANT: This file should be imported AFTER HorizontalServerList.css
+   This CSS transforms Discord's vertical server list
+   into a horizontal layout at the bottom of the interface.
    
    Based on HorizontalServerList by DiscordStyles
    ============================================ */
 
-/* ============================================
-   CSS VARIABLES FOR BOTTOM POSITIONING
-   ============================================ */
-
 :root {
+    --notices-height: 36px;
+    --serverlist-offset: var(--custom-guild-list-width);
     --custom-guild-list-width: 72px; /* Width of the horizontal server list */
     --custom-app-top-bar-height: 0px; /* Height of Discord's top bar */
+    --HSL-server-direction: column; /* Direction: column, column-reverse */
+    --HSL-server-alignment: flex-start; /* Alignment: flex-start, center, flex-end */
+    --HSL-top-padding: var(--size-sm); /* Top padding for server list */
 }
 
 /* ============================================
-   OVERRIDE TOP POSITIONING - MOVE TO BOTTOM
+   MAIN CONTENT ADJUSTMENT
    ============================================ */
 
-/* Override content margins from top positioning */
 .base_c48ade[data-fullscreen="false"] .content_c48ade {
     margin-top: unset !important;
     margin-bottom: var(--serverlist-offset) !important;
-}
-
-/* Override server list positioning from top to bottom */
-#app-mount .guilds_c48ade {
-    transform-origin: bottom left !important;
-    top: calc(100% + var(--custom-guild-list-width)) !important;
-    bottom: unset !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: var(--custom-guild-list-width) !important;
-    position: absolute !important;
-    z-index: 1000 !important;
-    /* Ensure the server list is visible */
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-}
-
-/* More specific override to ensure bottom positioning */
-#app-mount .sidebar_c48ade .guilds_c48ade {
-    top: calc(100% + var(--custom-guild-list-width)) !important;
-    transform-origin: bottom left !important;
-    /* Ensure the server list is visible */
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
+    overflow: visible !important;
 }
 
 /* ============================================
-   BOTTOM SERVER LIST POSITIONING
+   SERVER LIST CONTAINER TRANSFORMATION
    ============================================ */
 
-.content_c48ade {
-    margin-top: unset !important;
-    margin-bottom: var(--custom-guild-list-width) !important;
-}
+#app-mount {
+    .sidebar_c48ade {
+        border-radius: 0;
+        overflow: visible !important;
+    }
 
-#app-mount .guilds_c48ade {
-    top: calc(100% + var(--custom-guild-list-width)) !important;
+    /* Rotate the entire server list container for bottom positioning */
+    .guilds_c48ade {
+        transform-origin: bottom left !important;
+        rotate: -90deg;
+        height: 100vw !important;
+        bottom: unset;
+        position: absolute !important;
+        left: 0;
+        top: calc(100% + var(--custom-guild-list-width)) !important;
+    }
+
+    /* Server list tree styling */
+    .tree_ef3116 {
+        padding-top: var(--HSL-top-padding, var(--size-sm));
+    }
+
+    /* Rotate individual server icons back to normal */
+    .wrapper_cc5dd2 {
+        rotate: 90deg;
+    }
+
+    /* Server list direction and alignment */
+    .itemsContainer_ef3116,
+    .stack_dbd263 {
+        flex-direction: var(--HSL-server-direction);
+        justify-content: var(--HSL-server-alignment);
+    }
+
+    /* ============================================
+       NOTICES HANDLING
+       ============================================ */
+    
+    .notice__6e2b9 {
+        height: var(--notices-height);
+
+        & + .content_c48ade {
+            --serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
+            margin-bottom: var(--serverlist-offset) !important;
+        }
+    }
 }
 
 /* ============================================
@@ -73,45 +85,39 @@
    ============================================ */
 
 .container_c48ade > div[style]:not(.base_c48ade) {
+    width: 100vw !important;
+    height: var(--serverlist-offset) !important;
+    position: absolute;
     bottom: calc(var(--custom-guild-list-width) * 2) !important;
     top: unset !important;
-}
+    pointer-events: none;
+    z-index: 1000;
 
-.container_c48ade > div[style]:not(.base_c48ade) .guilds_c48ade {
-    top: calc(100% + var(--custom-guild-list-width) * 2) !important;
-}
+    .guilds_c48ade {
+        pointer-events: all;
+        top: calc(100% + var(--custom-guild-list-width) * 2) !important;
+    }
 
-.container_c48ade > div[style]:not(.base_c48ade) + .base_c48ade .content_c48ade {
-    margin-top: unset !important;
-    margin-bottom: calc(var(--custom-guild-list-width) * 2) !important;
+    & + .base_c48ade .content_c48ade {
+        margin-top: unset !important;
+        margin-bottom: calc(var(--serverlist-offset) * 2) !important;
+    }
 }
 
 /* ============================================
-   FINAL BOTTOM POSITIONING OVERRIDES
+   BOTTOM POSITIONING OVERRIDES
    ============================================ */
 
-/* Ensure server list stays at bottom regardless of other CSS */
-#app-mount .sidebar_c48ade .guilds_c48ade {
-    transform-origin: bottom left !important;
-    top: calc(100% + var(--custom-guild-list-width)) !important;
-    bottom: unset !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: var(--custom-guild-list-width) !important;
-    position: absolute !important;
-    z-index: 1000 !important;
+/* Ensure content margins are set for bottom positioning */
+.content_c48ade {
+    margin-top: unset !important;
+    margin-bottom: var(--custom-guild-list-width) !important;
 }
 
 /* Final override to ensure bottom positioning */
 #app-mount .guilds_c48ade {
-    transform-origin: bottom left !important;
     top: calc(100% + var(--custom-guild-list-width)) !important;
-    bottom: unset !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: var(--custom-guild-list-width) !important;
-    position: absolute !important;
-    z-index: 1000 !important;
+    transform-origin: bottom left !important;
 }
 
 /* ============================================
@@ -125,32 +131,15 @@
     display: block !important;
 }
 
-/* Fix rotation for bottom positioning */
-#app-mount .guilds_c48ade {
-    rotate: -90deg !important;
-    transform-origin: bottom left !important;
-}
-
 /* Ensure server icons are visible */
 #app-mount .guilds_c48ade .wrapper_cc5dd2 {
-    rotate: 90deg !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* ============================================
-   SERVER LIST VISIBILITY FIXES
-   ============================================ */
-
-/* Ensure the server list container is visible */
-#app-mount .sidebar_c48ade {
     opacity: 1 !important;
     visibility: visible !important;
     display: block !important;
 }
 
-/* Force server list items to be visible */
-#app-mount .guilds_c48ade .wrapper_cc5dd2 {
+/* Ensure the server list container is visible */
+#app-mount .sidebar_c48ade {
     opacity: 1 !important;
     visibility: visible !important;
     display: block !important;
