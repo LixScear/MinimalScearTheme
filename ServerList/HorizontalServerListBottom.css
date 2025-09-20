@@ -21,6 +21,24 @@
     margin-top: unset;
     margin-bottom: var(--serverlist-offset);
     overflow: visible !important;
+    position: relative;
+    min-height: calc(100vh - var(--serverlist-offset));
+}
+
+/* Ensure the main app container is properly positioned */
+#app-mount .base_c48ade {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Move the main content area to the bottom */
+#app-mount .base_c48ade .content_c48ade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: var(--serverlist-offset);
+    margin: 0;
 }
 
 /* ============================================
