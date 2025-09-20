@@ -12,8 +12,9 @@
 }
 
 /* Hide Nitro gift button */
-button[aria-label="Send a gift"] {
-    display: none;
+button[aria-label="Send a gift"],
+button[aria-label="Send a gift"] * {
+    display: none !important;
 }
 
 /* Hide sticker picker button */
@@ -41,13 +42,27 @@ foreignObject[mask="url(#svg-mask-avatar-status-mobile-32)"]::after {
 }
 
 /* Hide Nitro store section from friends list */
-.link__972a0[href="/store"] {
-    display: none;
+.link__972a0[href="/store"],
+a[href="/store"],
+[href="/store"] {
+    display: none !important;
 }
 
 /* Hide shop section from friends list */
-.link__972a0[href="/shop"] {
-    display: none;
+.link__972a0[href="/shop"],
+a[href="/shop"],
+[href="/shop"] {
+    display: none !important;
+}
+
+/* Hide Nitro promotions and ads */
+[class*="nitro"],
+[class*="Nitro"],
+[class*="premium"],
+[class*="Premium"],
+[class*="shop"],
+[class*="Shop"] {
+    display: none !important;
 }
 
 /* Hide "Quest" advertisement elements */
