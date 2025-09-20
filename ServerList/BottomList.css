@@ -33,6 +33,12 @@
 #app-mount .guilds_c48ade {
     transform-origin: bottom left !important;
     top: calc(100% + var(--custom-guild-list-width)) !important;
+    bottom: unset !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: var(--custom-guild-list-width) !important;
+    position: absolute !important;
+    z-index: 1000 !important;
 }
 
 /* ============================================
@@ -74,10 +80,46 @@
 #app-mount .sidebar_c48ade .guilds_c48ade {
     transform-origin: bottom left !important;
     top: calc(100% + var(--custom-guild-list-width)) !important;
+    bottom: unset !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: var(--custom-guild-list-width) !important;
+    position: absolute !important;
+    z-index: 1000 !important;
 }
 
 /* Final override to ensure bottom positioning */
 #app-mount .guilds_c48ade {
     transform-origin: bottom left !important;
     top: calc(100% + var(--custom-guild-list-width)) !important;
+    bottom: unset !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: var(--custom-guild-list-width) !important;
+    position: absolute !important;
+    z-index: 1000 !important;
+}
+
+/* ============================================
+   VISIBILITY FIXES
+   ============================================ */
+
+/* Ensure the server list is visible */
+#app-mount .guilds_c48ade {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Fix rotation for bottom positioning */
+#app-mount .guilds_c48ade {
+    rotate: -90deg !important;
+    transform-origin: bottom left !important;
+}
+
+/* Ensure server icons are visible */
+#app-mount .guilds_c48ade .wrapper_cc5dd2 {
+    rotate: 90deg !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
