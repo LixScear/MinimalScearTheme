@@ -8,7 +8,7 @@
    Based on HorizontalServerList by DiscordStyles
    ============================================ */
 
-:root {
+   :root {
     --notices-height: 36px;
     --serverlist-offset: var(--custom-guild-list-width);
 }
