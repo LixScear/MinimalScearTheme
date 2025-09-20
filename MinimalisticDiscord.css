@@ -234,6 +234,42 @@
     --activity-card-background: transparent;
     --deprecated-panel-background: transparent;
 }
+/* Restore sidebar blur */
+.sidebarListRounded_c48ade {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Restore container blur */
+.container_ac6cb0, 
+.zoomedCarouselModalRoot_f74404 {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Restore window button blur on hover */
+.winButtons_c38106 > div:hover {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Add glassmorphism to main containers */
+.panels_c48ade {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Add blur to user controls */
+.container__37e49 {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Add blur to settings modal */
+.settings-modal {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
 
 /* ============================================
    PERMISSIONS 
