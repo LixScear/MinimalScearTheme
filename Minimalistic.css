@@ -964,17 +964,6 @@ html.theme-light {
     padding-left: 60px !important;
 }
 
-/*custom popout window*/
-.content_c48ade {
-    margin: var(--window-margin);
-    /* Leave space for title bar's padding */
-    margin-top: 4px;
-    overflow: hidden;
-    border-radius: var(--window-border-radius);
-    background: var(--window-colour);
-    backdrop-filter: blur(var(--window-blur)) !important;
-}
-
 /*custom public servers and create server buttons*/
 .circleIconButton__5bc7e {
     border-radius: 50px;
