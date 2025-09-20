@@ -1,0 +1,89 @@
+/* Laravel */
+[href*="laravel.com"] {
+    color: #ff2d20 !important;
+}
+
+/* JavaScript */
+[href*="javascript.com"],
+[href*="js.org"],
+[href*="nodejs.org"],
+[href*="npmjs.com"] {
+    color: #f7df1e !important;
+}
+
+/* React */
+[href*="reactjs.org"],
+[href*="react.dev"] {
+    color: #61dafb !important;
+}
+
+/* Vue.js */
+[href*="vuejs.org"] {
+    color: #4fc08d !important;
+}
+
+/* Angular */
+[href*="angular.io"] {
+    color: #dd0031 !important;
+}
+
+/* Python */
+[href*="python.org"],
+[href*="pypi.org"] {
+    color: #3776ab !important;
+}
+
+/* PHP */
+[href*="php.net"] {
+    color: #777bb4 !important;
+}
+
+/* GitHub */
+[href*="github.com"] {
+    color: #24292e !important;
+}
+
+/* GitLab */
+[href*="gitlab.com"] {
+    color: #fc6d26 !important;
+}
+
+/* Stack Overflow */
+[href*="stackoverflow.com"] {
+    color: #f48024 !important;
+}
+
+/* MDN Web Docs */
+[href*="developer.mozilla.org"] {
+    color: #000000 !important;
+}
+
+/* W3Schools */
+[href*="w3schools.com"] {
+    color: #04aa6d !important;
+}
+
+/* CodePen */
+[href*="codepen.io"] {
+    color: #000000 !important;
+}
+
+/* JSFiddle */
+[href*="jsfiddle.net"] {
+    color: #0084ff !important;
+}
+
+/* Docker */
+[href*="docker.com"] {
+    color: #2496ed !important;
+}
+
+/* Kubernetes */
+[href*="kubernetes.io"] {
+    color: #326ce5 !important;
+}
+
+/* Tailwind CSS */
+[href*="tailwindcss.com"] {
+    color: #06b6d4 !important;
+}

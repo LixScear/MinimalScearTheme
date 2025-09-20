@@ -49,8 +49,6 @@
 /* ============================================
    MAIN THEME IMPORTS
    ============================================ */
-
-/* Entry point From Minimalistic.css */
 @import url("https://Lixscear.github.io/MinimalScearTheme/Minimalistic.css");
 
 /* ============================================
@@ -71,7 +69,19 @@
 
 /* Hide annoying elements (nitro, shop, sticker picker, etc.) */
 /* Remove the comment markers to enable */
-@import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordAnoints.css");
+@import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordElements.css");
+
+/* Details Grid */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Modification/AccountGrid.css");
+
+/* Settings */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Settings.css");
+
+/* Member List */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Modification/MemberList.css");
+
+/* Folder */
+@import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Folder.css");
 
 /* ============================================
     ROOT VARIABLES
@@ -160,10 +170,6 @@
     --rs-offline-color: #636b75;
     --rs-streaming-color: #643da7;
     --rs-invisible-color: #636b75;
-    
-    /* Phone visibility */
-    --rs-phone-visible: block; /* Change to `none` to disable mobile icon */
-    --rs-phone-color: var(--rs-online-color);
     
     /* ============================================
        ACCENT COLORS
