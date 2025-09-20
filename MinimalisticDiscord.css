@@ -240,6 +240,30 @@
     background: var(--window-colour) !important;
 }
 
+/* Add blur to chat area */
+.chat_f75fb0 {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Add blur to chat content */
+.chatContent_f75fb0 {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Add blur to message area */
+.messagesWrapper_f75fb0 {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* Add blur to channel header */
+.channelHeader_c48ade {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
 /* Restore container blur */
 .container_ac6cb0, 
 .zoomedCarouselModalRoot_f74404 {
