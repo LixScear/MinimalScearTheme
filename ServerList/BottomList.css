@@ -41,6 +41,12 @@
     z-index: 1000 !important;
 }
 
+/* More specific override to ensure bottom positioning */
+#app-mount .sidebar_c48ade .guilds_c48ade {
+    top: calc(100% + var(--custom-guild-list-width)) !important;
+    transform-origin: bottom left !important;
+}
+
 /* ============================================
    BOTTOM SERVER LIST POSITIONING
    ============================================ */
@@ -122,4 +128,31 @@
     rotate: 90deg !important;
     opacity: 1 !important;
     visibility: visible !important;
+}
+
+/* ============================================
+   DEBUGGING - TEMPORARY VISIBILITY FIXES
+   ============================================ */
+
+/* Force visibility with high specificity */
+#app-mount .sidebar_c48ade .guilds_c48ade {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    background: rgba(255, 0, 0, 0.1) !important; /* Temporary red background for debugging */
+}
+
+/* Ensure the container is visible */
+#app-mount .sidebar_c48ade {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Force server list items to be visible */
+#app-mount .guilds_c48ade .wrapper_cc5dd2 {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    background: rgba(0, 255, 0, 0.1) !important; /* Temporary green background for debugging */
 }
