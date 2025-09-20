@@ -39,12 +39,20 @@
     height: var(--custom-guild-list-width) !important;
     position: absolute !important;
     z-index: 1000 !important;
+    /* Ensure the server list is visible */
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
 /* More specific override to ensure bottom positioning */
 #app-mount .sidebar_c48ade .guilds_c48ade {
     top: calc(100% + var(--custom-guild-list-width)) !important;
     transform-origin: bottom left !important;
+    /* Ensure the server list is visible */
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
 /* ============================================
@@ -131,18 +139,10 @@
 }
 
 /* ============================================
-   DEBUGGING - TEMPORARY VISIBILITY FIXES
+   SERVER LIST VISIBILITY FIXES
    ============================================ */
 
-/* Force visibility with high specificity */
-#app-mount .sidebar_c48ade .guilds_c48ade {
-    opacity: 1 !important;
-    visibility: visible !important;
-    display: block !important;
-    background: rgba(255, 0, 0, 0.1) !important; /* Temporary red background for debugging */
-}
-
-/* Ensure the container is visible */
+/* Ensure the server list container is visible */
 #app-mount .sidebar_c48ade {
     opacity: 1 !important;
     visibility: visible !important;
@@ -154,5 +154,18 @@
     opacity: 1 !important;
     visibility: visible !important;
     display: block !important;
-    background: rgba(0, 255, 0, 0.1) !important; /* Temporary green background for debugging */
+}
+
+/* Ensure server list tree is visible */
+#app-mount .guilds_c48ade .tree_ef3116 {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+/* Ensure server list items container is visible */
+#app-mount .guilds_c48ade .itemsContainer_ef3116 {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
 }
