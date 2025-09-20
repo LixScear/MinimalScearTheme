@@ -108,6 +108,22 @@ html.theme-light .sidebar_c48ade .content__99f8c:after {
     opacity: 1;
 }
 
+/* Hide settings sections by default */
+.settings-modal .settings-section > * {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+/* Show first section by default */
+.settings-modal .settings-section > :first-child {
+    opacity: 1;
+}
+
+/* Show all sections on hover */
+.settings-modal .settings-section:hover > * {
+    opacity: 1;
+}
+
 /* Button container layout */
 .buttons__37e49 {
     width: 100%;
