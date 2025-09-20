@@ -2,9 +2,7 @@
    BOTTOM SERVER LIST POSITIONING
    ============================================ */
 
-   /* Push content up instead of down */
-   /* Simply comments surrounding code to disable it. */
-.content_c48ade {
+   .content_c48ade {
 	margin-top: unset;
 	margin-bottom: var(--custom-guild-list-width);
 }
