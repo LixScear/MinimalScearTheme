@@ -10,7 +10,8 @@
    ============================================ */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Minimalistic.css");
 
-   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/HorizontalMain.css"); */
+   /* Horizontal Server List Top / Core */
+   @import url('https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerTop.css');
 
    /* ============================================
       REMOVABLE ADDONS
@@ -26,7 +27,7 @@
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
    
    /* Horizontal Server List Bottom */
-   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerBottom.scss"); */
+   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerBottom.css"); */
    
    /* Hide annoying elements (nitro, shop, sticker picker, etc.) */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordElement.css");
