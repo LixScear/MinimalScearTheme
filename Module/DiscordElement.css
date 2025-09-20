@@ -1,3 +1,11 @@
+/*
+ * DISCORD ANNOYANCES REMOVAL
+ * ==========================
+ * This file removes various Discord features and UI elements that users
+ * might find annoying or unnecessary, such as Nitro promotions, stickers,
+ * super reactions, and mobile indicators.
+ */
+
 /* Hide the "Play Again" section in DMs */
 .container__675e5 {
     display: none !important;
@@ -23,7 +31,7 @@ button[id="super-reaction-picker-tab"] {
     display: none;
 }
 
-/* Remove mobile icon */
+/* Remove mobile status indicator from avatars */
 foreignObject[mask="url(#svg-mask-avatar-status-mobile-32)"]::after {
     visibility: hidden !important;
 }
@@ -32,17 +40,17 @@ foreignObject[mask="url(#svg-mask-avatar-status-mobile-32)"]::after {
     display: none;
 }
 
-/* Hide nitro section of friends list */
+/* Hide Nitro store section from friends list */
 .link__972a0[href="/store"] {
     display: none;
 }
 
-/* Hide shop section of friends list */
+/* Hide shop section from friends list */
 .link__972a0[href="/shop"] {
     display: none;
 }
 
-/* Hide "Quest" advertisements */
+/* Hide "Quest" advertisement elements */
 .mask__0d616 {
     display: none;
 }
