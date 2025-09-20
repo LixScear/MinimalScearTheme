@@ -59,19 +59,37 @@
    ============================================ */
 
 /* Main chat area */
-.chat_f75fb0 {
+.chat_f75fb0,
+.chat-3bRxxu,
+.chat__52833 {
     backdrop-filter: blur(var(--blur-light)) !important;
     background: var(--transparency-light) !important;
 }
 
 /* Chat content area */
-.chatContent_f75fb0 {
+.chatContent_f75fb0,
+.chatContent-3KubbW,
+.chatContent__52833 {
     backdrop-filter: blur(var(--blur-light)) !important;
     background: var(--transparency-light) !important;
 }
 
 /* Message wrapper */
-.messagesWrapper_f75fb0 {
+.messagesWrapper_f75fb0,
+.messagesWrapper-3l3fms,
+.messagesWrapper__52833 {
+    backdrop-filter: blur(var(--blur-light)) !important;
+    background: var(--transparency-light) !important;
+}
+
+/* Main content area */
+.content_c48ade {
+    backdrop-filter: blur(var(--blur-light)) !important;
+    background: var(--transparency-light) !important;
+}
+
+/* Chat container */
+.container_c48ade {
     backdrop-filter: blur(var(--blur-light)) !important;
     background: var(--transparency-light) !important;
 }
@@ -149,8 +167,16 @@
 }
 
 .theme-light .chat_f75fb0,
+.theme-light .chat-3bRxxu,
+.theme-light .chat__52833,
 .theme-light .chatContent_f75fb0,
-.theme-light .messagesWrapper_f75fb0 {
+.theme-light .chatContent-3KubbW,
+.theme-light .chatContent__52833,
+.theme-light .messagesWrapper_f75fb0,
+.theme-light .messagesWrapper-3l3fms,
+.theme-light .messagesWrapper__52833,
+.theme-light .content_c48ade,
+.theme-light .container_c48ade {
     background: var(--transparency-light-light) !important;
 }
 
