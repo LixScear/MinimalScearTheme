@@ -22,9 +22,10 @@
    CUSTOM WORDMARK/BRANDING
    ============================================ */
 
-/* Custom wordmark styling */
+/* Custom wordmark styling - COMMENTED OUT */
+/*
 .leading_c38106::before {
-    content: "‏‏‎ R o c k e t A u t o m a t i o n";
+    content: "‏‏‎ P R O G R A M E";
     font-size: 12px;
     font-weight: 100;
     font-style: italic;
@@ -39,11 +40,12 @@
     color: var(--text-primary);
 }
 
-/* Wordmark hover effect with letter spacing */
+/* Wordmark hover effect with letter spacing 
 .leading_c38106:hover::before {
-    content: "‏‏‎ R o c k e t A u t o m a t i o n";
+    content: "‏‏‎ P R O G R A M E";
     letter-spacing: 2px;
 }
+*/
 
 /* ============================================
    SERVER NAME DISPLAY
