@@ -3,7 +3,7 @@
    ============================================
    
    This CSS transforms Discord's vertical server list
-   into a horizontal layout at the top of the interface.
+   into a horizontal layout at the bottom of the interface.
    
    Based on HorizontalServerList by DiscordStyles
    ============================================ */
@@ -18,7 +18,7 @@
    ============================================ */
 
 .base_c48ade[data-fullscreen="false"] .content_c48ade {
-    margin-top: var(--serverlist-offset);
+    margin-bottom: var(--serverlist-offset);
     overflow: visible !important;
 }
 
@@ -66,9 +66,14 @@
     
     .notice__6e2b9 {
         height: var(--notices-height);
+        position: absolute;
+        bottom: var(--serverlist-offset);
+        left: 0;
+        right: 0;
+        z-index: 1001;
 
         & + .content_c48ade {
-            --serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
+            margin-bottom: calc(var(--notices-height) + var(--serverlist-offset));
         }
     }
 }
