@@ -1,0 +1,69 @@
+/* ============================================
+   BLUR EFFECTS  
+   ============================================
+   
+   This file contains all blur effects for the theme,
+   providing a consistent glassmorphism appearance
+   across Discord's interface.
+   ============================================ */
+
+/* ============================================
+   SIDEBAR BLUR EFFECTS
+   ============================================ */
+
+/* Restore sidebar blur */
+.sidebarListRounded_c48ade {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* ============================================
+   CONTAINER BLUR EFFECTS
+   ============================================ */
+
+/* Restore container blur */
+.container_ac6cb0, 
+.zoomedCarouselModalRoot_f74404 {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* ============================================
+   WINDOW CONTROL BLUR EFFECTS
+   ============================================ */
+
+/* Restore window button blur on hover */
+.winButtons_c38106 > div:hover {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* ============================================
+   MAIN CONTAINER BLUR EFFECTS
+   ============================================ */
+
+/* Add glassmorphism to main containers */
+.panels_c48ade {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* ============================================
+   USER CONTROLS BLUR EFFECTS
+   ============================================ */
+
+/* Add blur to user controls */
+.container__37e49 {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
+
+/* ============================================
+   SETTINGS MODAL BLUR EFFECTS
+   ============================================ */
+
+/* Add blur to settings modal */
+.settings-modal {
+    backdrop-filter: blur(var(--window-blur)) !important;
+    background: var(--window-colour) !important;
+}
