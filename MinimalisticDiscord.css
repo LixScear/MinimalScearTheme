@@ -27,10 +27,9 @@
    @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/HorizontalServerList.css");
    
    /* Horizontal Server List - Bottom */
-   @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/bottomhsl.css");
+   @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/BottomList.css");
    
    /* Hide annoying elements (nitro, shop, sticker picker, etc.) */
-   /* Remove the comment markers to enable */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordElement.css");
    
    /* Details Grid */
@@ -44,6 +43,9 @@
    
    /* Folder */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Folder.css");
+   
+   /* Links */
+   @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Links.css");
    
    /* Blur Effects */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/Blur.css");

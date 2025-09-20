@@ -12,7 +12,7 @@
    CONTENT ADJUSTMENT FOR BOTTOM SERVER LIST
    ============================================ */
 
-.content_c48ade {
+   .content_c48ade {
     margin-top: unset !important;
     margin-bottom: var(--custom-guild-list-width) !important;
 }
