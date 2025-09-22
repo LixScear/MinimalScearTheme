@@ -17,14 +17,14 @@
       REMOVABLE ADDONS
       ============================================
    
-   /* Server users bar */
-   @import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
+   /* Server User Sidebar - collapsible member list functionality */
+   @import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerUserSideBar.css");
    
    /* Radial status */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
    
    /* Horizontal Server List Bottom */
-   /* @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerBottom.css"); */
+   @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerBottom.css");
    
    /* Hide annoying elements (nitro, shop, sticker picker, etc.) */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/DiscordElement.css");
@@ -34,12 +34,6 @@
    
    /* Settings - customizes the settings modal. */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Settings.css");
-   
-   /* Member List - customizes the member list to a more minimalistic look. */
-   @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/MemberList.css");
-
-   /* Server folder customization - hides preview overlays and customizes folder icons */
-   @import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
    
    /* Server folder redesign - custom folder icons, hidden previews, and enhanced styling */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Folder.css");
@@ -104,7 +98,7 @@
           USER CUSTOMIZATION
           ============================================ */
        
-       --user-name: "Personal"; /* Add Custom Name Here (Replace Personal)*/
+       --user-name: ""; /* Add Custom Name Here (Replace Personal)*/
        --edited-message: " EDITED ✎ ";
        --font-name: Poppins;
        --font-size: 12px;
@@ -246,11 +240,5 @@
        --activity-card-background: transparent;
        --deprecated-panel-background: transparent;
    }
-   
-   /* ============================================
-      PERMISSIONS 
-      ============================================ */
-   
-   /*PERMISSIONS: You do not have the rights to use my theme on other projects
-   
+
    
