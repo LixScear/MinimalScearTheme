@@ -20,9 +20,6 @@
    /* Server users bar */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
    
-   /* Folder redesign */
-   @import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
-   
    /* Radial status */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
    
@@ -35,19 +32,22 @@
    /* Details Grid */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/AccountGrid.css");
    
-   /* Settings */
+   /* Settings - customizes the settings modal. */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Settings.css");
    
-   /* Member List */
+   /* Member List - customizes the member list to a more minimalistic look. */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/MemberList.css");
+
+   /* Server folder customization - hides preview overlays and customizes folder icons */
+   @import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerAddions.css");
    
-   /* Folder */
+   /* Server folder redesign - custom folder icons, hidden previews, and enhanced styling */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Folder.css");
    
-   /* Links */
+   /* Recolored Links */
    @import url("https://Lixscear.github.io/MinimalScearTheme/Modification/Links.css");
    
-   /* Blur Effects */
+   /* Blur Effects - adds blur effects to the main interface. Disalbe for a cleaner look. (Not Fully Supported)*/
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/Blur.css");
    
    /* ============================================
@@ -63,11 +63,11 @@
        --background-image: var(--wallpaper);
        --bg-opacity: 100%;
        
-       /* Background suggestions */
+       /* Background Wallpaper / Change to your own wallpaper here. Remove within the quotes. */
        --wallpaper: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Life-Death.png");
    
        /* LightDark background selection */
-       --modern-light-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Light.png");
+       --modern-light-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Black-Hole.jpg");
        --modern-dark-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Dark.png");
    }
    
@@ -104,7 +104,7 @@
           USER CUSTOMIZATION
           ============================================ */
        
-       --user-name: "";
+       --user-name: "Personal"; /* Add Custom Name Here (Replace Personal)*/
        --edited-message: " EDITED ✎ ";
        --font-name: Poppins;
        --font-size: 12px;
