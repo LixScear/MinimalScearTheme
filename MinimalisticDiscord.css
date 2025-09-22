@@ -195,6 +195,9 @@
        --HSL-top-padding: var(--size-sm); /* Bottom padding for server list */
        --notices-height: 36px;
        --serverlist-offset: var(--custom-guild-list-width);
+       
+       /* Server list thickness - adjust this value to make it thinner/thicker */
+       --custom-guild-list-width: 30px; /* Default: 40px, try 30px for thinner, 50px for thicker */
    }
    
    /* ============================================
