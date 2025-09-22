@@ -433,8 +433,8 @@
 
 /* Fine-tune user info avatar positioning */
 #app-mount .userInfo__0a06e .wrapper__44b0c {
-    margin-top: 1px;
-    margin-left: 1px;
+    /* margin-top: 1px; - removed to fix mini profile centering */
+    /* margin-left: 1px; - removed to fix mini profile centering */
 }
 
 /* ============================================
