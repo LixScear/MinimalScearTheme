@@ -394,9 +394,9 @@
     /* Remove default padding */
     padding-top: 0;
     
-    /* Fix dimensions to prevent shrinking */
-    width: 100% !important;
-    height: 100% !important;
+    /* Calculate dimensions with spacing */
+    width: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
+    height: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
     
     /* Center the hint */
     top: 50%;
@@ -434,16 +434,6 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
-
-/* Fix status indicator sizing - make it match avatar size exactly */
-#app-mount .wrapper__44b0c rect {
-    /* Make status indicator match the avatar size exactly */
-    width: 100% !important;
-    height: 100% !important;
-    /* Center the indicator properly */
-    x: 0 !important;
-    y: 0 !important;
 }
 
 /* ============================================
