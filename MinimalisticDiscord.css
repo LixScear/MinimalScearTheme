@@ -58,11 +58,11 @@
        --bg-opacity: 100%;
        
        /* Background Wallpaper / Change to your own wallpaper here. Remove within the quotes. */
-       --wallpaper: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Life-Death.png");
+       --wallpaper: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Night-Lake.gif");
    
        /* LightDark background selection */
-       --modern-light-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Black-Hole.jpg");
-       --modern-dark-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Dark.png");
+       --modern-light-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Day-Lake.gif");
+       --modern-dark-bg: url("https://LixScear.github.io/MinimalScearTheme/CustomizableWallpapers/BG-Night-Lake.gif");
    }
    
    /* ============================================
