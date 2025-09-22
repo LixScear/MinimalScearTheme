@@ -72,8 +72,8 @@
 
 /* Title bar buttons container */
 .trailing_c38106 {
-    margin-right: calc(max(var(--window-margin), 4px));
-    margin-top: -8px; /* Move window controls higher to prevent overlap */
+    margin-right: 2px; /* Move window controls to the far right edge */
+    margin-top: -7px; /* Move window controls higher to prevent overlap */
     position: relative;
     z-index: 1000; /* Ensure they stay above other elements */
 }
