@@ -21,7 +21,7 @@
 
 /* Position the guilds container at the bottom with proper spacing */
 #app-mount .guilds_c48ade {
-  top: calc(100% + var(--custom-guild-list-width) + 20px); /* Position below content with server list width spacing + extra 20px */
+  top: calc(100% + var(--custom-guild-list-width)); /* Position below content with server list width spacing */
 }
 
 /* ============================================
@@ -30,13 +30,13 @@
 
 /* Position styled containers (not base containers) at the bottom */
 .container_c48ade > div[style]:not(.base_c48ade) {
-  bottom: calc(var(--custom-guild-list-width) * 2 + 20px); /* Position from bottom with double server list width spacing + extra 20px */
+  bottom: calc(var(--custom-guild-list-width) * 2); /* Position from bottom with double server list width spacing */
   top: unset; /* Remove top positioning */
 }
 
 /* Adjust guilds positioning within styled containers */
 .container_c48ade > div[style]:not(.base_c48ade) .guilds_c48ade {
-  top: calc(100% + var(--custom-guild-list-width) * 2 + 20px) !important; /* Position with double spacing + extra 20px for styled containers */
+  top: calc(100% + var(--custom-guild-list-width) * 2) !important; /* Position with double spacing for styled containers */
 }
 
 /* ============================================
@@ -46,5 +46,5 @@
 /* Adjust content margins for base containers that follow styled containers */
 .container_c48ade > div[style]:not(.base_c48ade) + .base_c48ade .content_c48ade {
   margin-top: unset; /* Remove top margin */
-  margin-bottom: calc(var(--custom-guild-list-width) * 2 + 20px); /* Add bottom margin with double server list width spacing + extra 20px */
+  margin-bottom: calc(var(--custom-guild-list-width) * 2); /* Add bottom margin with double server list width spacing */
 }
