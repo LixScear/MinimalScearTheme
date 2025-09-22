@@ -2560,6 +2560,10 @@ div.mainCard_f369db div.channelTextAreaInner_d9be46.scrollableContainer__74017.t
 }
 
 /*Render the original edited text invisible*/
+.edited_c19a55 {
+    font-size: 0 !important; /* Hide the original Discord edited text */
+}
+
 .edited_c19a55::before {
     content: "(" var(--edited-message) ")"; /*Put the edited icon before the original edited text.*/
     color: var(--text-muted); /*Give it the same muted color at the edited text.*/
