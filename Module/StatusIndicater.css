@@ -204,8 +204,8 @@
 #app-mount .wrapper__44b0c[style*="32px"] rect {
     width: 32px;
     height: 32px;
-    x: -14.5;
-    y: -17;
+    x: 0 !important;
+    y: 0 !important;
     position: relative;
     z-index: 0;
 }
@@ -427,17 +427,13 @@
    USER INFO ADJUSTMENTS
    ============================================ */
 
-/* Fine-tune user info avatar positioning - margins removed to fix mini profile centering */
-/* #app-mount .userInfo__0a06e .wrapper__44b0c {
-    margin-top: 1px;
-    margin-left: 1px;
-} */
-
-/* Mini profile status indicator sizing - make it smaller for mini profiles */
-#app-mount .userInfo__0a06e .wrapper__44b0c rect {
-    width: 20px !important;
-    height: 20px !important;
-    stroke-width: 1px !important;
+/* Fine-tune user info avatar positioning - ensure proper centering */
+#app-mount .userInfo__0a06e .wrapper__44b0c {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 /* ============================================
