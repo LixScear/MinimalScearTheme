@@ -90,6 +90,16 @@
     margin-top: -4px; /* Additional upward positioning for individual buttons */
 }
 
+/* Help icon specific positioning - move it higher */
+.trailing_c38106 > .anchor_edefb8 {
+    margin-top: -8px; /* Move help icon higher than other buttons */
+}
+
+/* Inbox icon specific positioning - move it higher */
+.recentsIcon_c99c29 {
+    margin-top: -8px; /* Move inbox icon higher than other buttons */
+}
+
 /* Window control buttons hover effect */
 .recentsIcon_c99c29:hover,
 .trailing_c38106 > .anchor_edefb8:hover,
