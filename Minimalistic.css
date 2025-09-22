@@ -1378,13 +1378,13 @@ svg {
 }
 
 /*guild pills glow*/
-html.theme-dark .item__58105 {
+/* html.theme-dark .item__58105 {
     box-shadow: 0 0 3px rgb(255, 255, 255);
 }
 
 html.theme-light .item__58105 {
     box-shadow: 0 0 3px rgb(0, 0, 0);
-}
+} */
 
 /*inline colour error fix*/
 html.theme-dark .inline {
