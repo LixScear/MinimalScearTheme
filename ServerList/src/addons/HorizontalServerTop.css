@@ -1,43 +1,101 @@
+/* ============================================
+   HORIZONTAL SERVER LIST - TOP POSITIONING
+   ============================================
+   This file handles the positioning of the horizontal server list
+   when it's placed at the top of the screen instead of the left sidebar.
+   ============================================ */
+
+/* ============================================
+   MAIN CONTENT AREA ADJUSTMENTS
+   ============================================ */
+
+/* Adjust main content area to accommodate top server list */
 .content_c48ade {
-  margin-top: var(--custom-guild-list-width);
-  overflow: visible !important;
+  margin-top: var(--custom-guild-list-width); /* Add top margin equal to server list width */
+  overflow: visible !important; /* Allow content to be visible outside bounds */
 }
 
+/* ============================================
+   SIDEBAR CONTAINER STYLING
+   ============================================ */
+
+/* Style the sidebar container for horizontal layout */
 #app-mount .sidebar_c48ade {
-  border-radius: 0;
-  overflow: visible !important;
+  border-radius: 0; /* Remove border radius for clean edges */
+  overflow: visible !important; /* Allow sidebar content to be visible */
 }
+
+/* ============================================
+   SERVER LIST TRANSFORMATION
+   ============================================ */
+
+/* Transform the guilds container to horizontal orientation */
 #app-mount .guilds_c48ade {
-  transform-origin: top left;
-  rotate: -90deg;
-  height: 100vw !important;
-  bottom: unset;
-  position: absolute !important;
-  left: 0;
+  transform-origin: top left; /* Set rotation origin point */
+  rotate: -90deg; /* Rotate 90 degrees counter-clockwise to make horizontal */
+  height: 100vw !important; /* Set height to viewport width for horizontal layout */
+  bottom: unset; /* Remove bottom positioning */
+  position: absolute !important; /* Position absolutely for precise placement */
+  left: 0; /* Align to left edge */
 }
+
+/* ============================================
+   SERVER TREE PADDING
+   ============================================ */
+
+/* Add padding to the server tree container */
 #app-mount .tree_ef3116 {
-  padding-top: var(--HSL-top-padding, var(--size-sm));
+  padding-top: var(--HSL-top-padding, var(--size-sm)); /* Add top padding using HSL variable or fallback */
 }
+
+/* ============================================
+   SERVER WRAPPER ROTATION
+   ============================================ */
+
+/* Rotate server wrappers back to normal orientation */
 #app-mount .wrapper_cc5dd2 {
-  rotate: 90deg;
+  rotate: 90deg; /* Rotate 90 degrees clockwise to counter the parent rotation */
 }
+
+/* ============================================
+   SERVER CONTAINER LAYOUT
+   ============================================ */
+
+/* Configure server container and stack layout direction */
 #app-mount .itemsContainer_ef3116,
 #app-mount .stack_dbd263 {
-  flex-direction: var(--HSL-server-direction);
-  justify-content: var(--HSL-server-alignment);
+  flex-direction: var(--HSL-server-direction); /* Set flex direction using HSL variable */
+  justify-content: var(--HSL-server-alignment); /* Set alignment using HSL variable */
 }
 
+/* ============================================
+   STYLED CONTAINER POSITIONING
+   ============================================ */
+
+/* Position styled containers (not base containers) at the top */
 .container_c48ade > div[style]:not(.base_c48ade) {
-  width: 100vw !important;
-  height: var(--custom-guild-list-width) !important;
-  position: absolute;
-  top: calc(var(--custom-guild-list-width) + var(--custom-app-top-bar-height));
-  pointer-events: none;
-  z-index: 1;
+  width: 100vw !important; /* Full viewport width */
+  height: var(--custom-guild-list-width) !important; /* Height equal to server list width */
+  position: absolute; /* Absolute positioning */
+  top: calc(var(--custom-guild-list-width) + var(--custom-app-top-bar-height)); /* Position below top bar and server list */
+  pointer-events: none; /* Disable pointer events on container */
+  z-index: 1; /* Set stacking order */
 }
+
+/* ============================================
+   GUILDS INTERACTION
+   ============================================ */
+
+/* Enable pointer events for guilds within styled containers */
 .container_c48ade > div[style]:not(.base_c48ade) .guilds_c48ade {
-  pointer-events: all;
+  pointer-events: all; /* Enable all pointer events for guild interaction */
 }
+
+/* ============================================
+   ADJACENT BASE CONTAINER ADJUSTMENTS
+   ============================================ */
+
+/* Adjust content margins for base containers that follow styled containers */
 .container_c48ade > div[style]:not(.base_c48ade) + .base_c48ade .content_c48ade {
-  margin-top: calc(var(--custom-guild-list-width) * 2);
+  margin-top: calc(var(--custom-guild-list-width) * 2); /* Add double server list width as top margin */
 }
