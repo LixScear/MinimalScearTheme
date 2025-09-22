@@ -197,7 +197,7 @@
        --serverlist-offset: var(--custom-guild-list-width);
        
        /* Server list thickness - adjust this value to make it thinner/thicker */
-       --custom-guild-list-width: 30px; /* Default: 40px, try 30px for thinner, 50px for thicker */
+       --custom-guild-list-width: 45px; /* Default: 40px, try 30px for thinner, 50px for thicker */
    }
    
    /* ============================================
