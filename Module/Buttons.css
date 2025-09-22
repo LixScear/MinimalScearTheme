@@ -63,9 +63,19 @@
    WINDOW CONTROL BUTTONS
    ============================================ */
 
+/* 
+   CUSTOMIZATION: Window control buttons positioning
+   - Moved higher to prevent overlap with chat box
+   - Added z-index to ensure they stay above other elements
+   - Adjust margin-top values to fine-tune positioning
+*/
+
 /* Title bar buttons container */
 .trailing_c38106 {
     margin-right: calc(max(var(--window-margin), 4px));
+    margin-top: -8px; /* Move window controls higher to prevent overlap */
+    position: relative;
+    z-index: 1000; /* Ensure they stay above other elements */
 }
 
 /* Window control buttons base styling */
@@ -77,6 +87,7 @@
     backdrop-filter: blur(var(--window-blur));
     transition: 0.2s;
     border-radius: var(--window-border-radius);
+    margin-top: -4px; /* Additional upward positioning for individual buttons */
 }
 
 /* Window control buttons hover effect */
@@ -95,6 +106,9 @@
 /* Remove gap between window buttons */
 .winButtons_c38106 {
     gap: 0;
+    margin-top: -6px; /* Move the entire button group higher */
+    position: relative;
+    z-index: 1001; /* Higher z-index than container */
 }
 
 /* First button (minimize) - remove right border radius */
