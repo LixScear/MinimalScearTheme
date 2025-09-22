@@ -1,20 +1,50 @@
+/* ============================================
+   HORIZONTAL SERVER LIST - BOTTOM POSITIONING
+   ============================================
+   This file handles the positioning of the horizontal server list
+   when it's placed at the bottom of the screen instead of the top.
+   ============================================ */
+
+/* ============================================
+   MAIN CONTENT AREA ADJUSTMENTS
+   ============================================ */
+
+/* Adjust main content area margins for bottom server list */
 .content_c48ade {
-  margin-top: unset;
-  margin-bottom: var(--custom-guild-list-width);
+  margin-top: unset; /* Remove top margin */
+  margin-bottom: var(--custom-guild-list-width); /* Add bottom margin equal to server list width */
 }
 
+/* ============================================
+   SERVER LIST POSITIONING
+   ============================================ */
+
+/* Position the guilds container at the bottom with proper spacing */
 #app-mount .guilds_c48ade {
-  top: calc(100% + var(--custom-guild-list-width));
+  top: calc(100% + var(--custom-guild-list-width) + 20px); /* Position below content with server list width spacing + extra 20px */
 }
 
+/* ============================================
+   CONTAINER-SPECIFIC POSITIONING
+   ============================================ */
+
+/* Position styled containers (not base containers) at the bottom */
 .container_c48ade > div[style]:not(.base_c48ade) {
-  bottom: calc(var(--custom-guild-list-width) * 2);
-  top: unset;
+  bottom: calc(var(--custom-guild-list-width) * 2 + 20px); /* Position from bottom with double server list width spacing + extra 20px */
+  top: unset; /* Remove top positioning */
 }
+
+/* Adjust guilds positioning within styled containers */
 .container_c48ade > div[style]:not(.base_c48ade) .guilds_c48ade {
-  top: calc(100% + var(--custom-guild-list-width) * 2) !important;
+  top: calc(100% + var(--custom-guild-list-width) * 2 + 20px) !important; /* Position with double spacing + extra 20px for styled containers */
 }
+
+/* ============================================
+   ADJACENT BASE CONTAINER ADJUSTMENTS
+   ============================================ */
+
+/* Adjust content margins for base containers that follow styled containers */
 .container_c48ade > div[style]:not(.base_c48ade) + .base_c48ade .content_c48ade {
-  margin-top: unset;
-  margin-bottom: calc(var(--custom-guild-list-width) * 2);
+  margin-top: unset; /* Remove top margin */
+  margin-bottom: calc(var(--custom-guild-list-width) * 2 + 20px); /* Add bottom margin with double server list width spacing + extra 20px */
 }

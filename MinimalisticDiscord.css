@@ -160,7 +160,7 @@
           ============================================ */
        
        /* Input field placeholder */
-       --input-field: "To Meow, or not to Meow";
+       --input-field: "";
        
        /* Locked channel placeholder */
        --input-field-locked: "Access Denied";
