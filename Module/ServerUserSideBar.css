@@ -1,5 +1,5 @@
 /* ============================================
-   SERVER ADDITIONS - COLLAPSIBLE MEMBER LIST & FOLDER STYLING
+   SERVER USER SIDEBAR - COLLAPSIBLE MEMBER LIST
    ============================================ */
 
 /* ============================================
@@ -195,49 +195,4 @@ div:not(:hover) > .members_c8ffbb > div {
 
 .members_c8ffbb:not(:hover) > .vc-membercount-member-list {
     flex-wrap: wrap;
-}
-
-
-/* ============================================
-   SERVER FOLDER STYLING
-   ============================================ */
-
-/* Hide folder preview overlay */
-.folderPreview__48112 {
-    display: none;
-}
-
-/* Remove transform from expanded folder icon wrapper */
-.expandedFolderIconWrapper__48112 {
-    transform: none !important;
-}
-
-/* Custom folder icon styling with pseudo-elements */
-.folderPreviewWrapper__48112:not([style=""]):before, 
-.folderPreviewWrapper__48112:not([style=""]):after {
-    /* Position pseudo-elements absolutely */
-    position: absolute;
-    content: "";
-    
-    /* Set icon dimensions */
-    width: 24px;
-    height: 24px;
-    
-    /* Center the icon */
-    inset: 0;
-    margin: auto;
-    
-    /* Inherit background color from parent */
-    background-color: inherit;
-    
-    /* Apply folder SVG mask */
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z'/%3E%3C/svg%3E");
-    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z'/%3E%3C/svg%3E");
-    mask-repeat: no-repeat;
-    
-    /* Enhance visual appearance */
-    filter: brightness(1.2) saturate(1.1);
-    
-    /* Position below the folder */
-    bottom: -45px;
 }
