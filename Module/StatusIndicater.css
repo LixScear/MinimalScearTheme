@@ -275,28 +275,10 @@
    ============================================ */
 
 /* Default small avatar image clipping */
-#app-mount .wrapper__44b0c:not([style*="80px;"], [style*="120px;"], [style*="16px"]) > svg > foreignObject:not(:only-child) img {
-    clip-path: inset(calc(var(--rs-small-spacing) + 1px) calc(var(--rs-small-spacing) + 1px) round var(--rs-avatar-shape));
-}
-
-/* Hide status rectangles for 16px avatars */
-#app-mount .wrapper__44b0c[style="width: 16px; height: 16px;"] rect {
-    display: none;
-}
-
-/* Remove clipping for 16px avatars */
-#app-mount .wrapper__44b0c[style="width: 16px; height: 16px;"] img {
-    clip-path: none;
-}
 
 /* ============================================
    MOBILE INDICATOR STYLING
    ============================================ */
-
-/* Mobile indicator base styling */
-#app-mount .wrapper__44b0c foreignObject[mask*=mobile] {
-    property: inherit;
-}
 
 /* Mobile indicator sizing for different avatar sizes */
 #app-mount .wrapper__44b0c foreignObject[mask*=mobile][width="24"]:after {
