@@ -1,6 +1,58 @@
+/* ============================================
+   SYSTEM THEME DETECTION
+   ============================================ */
+
+/* Light mode colors (default) */
+:root {
+    --link-laravel: #ff2d20;
+    --link-javascript: #f7df1e;
+    --link-react: #61dafb;
+    --link-vue: #4fc08d;
+    --link-angular: #dd0031;
+    --link-python: #3776ab;
+    --link-php: #777bb4;
+    --link-github: #363636;
+    --link-gitlab: #fc6d26;
+    --link-stackoverflow: #f48024;
+    --link-mdn: #000000;
+    --link-w3schools: #04aa6d;
+    --link-codepen: #000000;
+    --link-jsfiddle: #0084ff;
+    --link-docker: #2496ed;
+    --link-kubernetes: #326ce5;
+    --link-tailwind: #06b6d4;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --link-laravel: #ff6b6b;
+        --link-javascript: #f7df1e;
+        --link-react: #61dafb;
+        --link-vue: #4fc08d;
+        --link-angular: #ff6b6b;
+        --link-python: #3776ab;
+        --link-php: #777bb4;
+        --link-github: #ffffff;
+        --link-gitlab: #fc6d26;
+        --link-stackoverflow: #f48024;
+        --link-mdn: #ffffff;
+        --link-w3schools: #04aa6d;
+        --link-codepen: #ffffff;
+        --link-jsfiddle: #0084ff;
+        --link-docker: #2496ed;
+        --link-kubernetes: #326ce5;
+        --link-tailwind: #06b6d4;
+    }
+}
+
+/* ============================================
+   LINK STYLING
+   ============================================ */
+
 /* Laravel */
 [href*="laravel.com"] {
-    color: #ff2d20 !important;
+    color: var(--link-laravel) !important;
 }
 
 /* JavaScript */
@@ -8,82 +60,82 @@
 [href*="js.org"],
 [href*="nodejs.org"],
 [href*="npmjs.com"] {
-    color: #f7df1e !important;
+    color: var(--link-javascript) !important;
 }
 
 /* React */
 [href*="reactjs.org"],
 [href*="react.dev"] {
-    color: #61dafb !important;
+    color: var(--link-react) !important;
 }
 
 /* Vue.js */
 [href*="vuejs.org"] {
-    color: #4fc08d !important;
+    color: var(--link-vue) !important;
 }
 
 /* Angular */
 [href*="angular.io"] {
-    color: #dd0031 !important;
+    color: var(--link-angular) !important;
 }
 
 /* Python */
 [href*="python.org"],
 [href*="pypi.org"] {
-    color: #3776ab !important;
+    color: var(--link-python) !important;
 }
 
 /* PHP */
 [href*="php.net"] {
-    color: #777bb4 !important;
+    color: var(--link-php) !important;
 }
 
 /* GitHub */
 [href*="github.com"] {
-    color: #b0b1b3 !important;
+    color: var(--link-github) !important;
 }
 
 /* GitLab */
 [href*="gitlab.com"] {
-    color: #fc6d26 !important;
+    color: var(--link-gitlab) !important;
 }
 
 /* Stack Overflow */
 [href*="stackoverflow.com"] {
-    color: #f48024 !important;
+    color: var(--link-stackoverflow) !important;
 }
 
 /* MDN Web Docs */
 [href*="developer.mozilla.org"] {
-    color: #000000 !important;
+    color: var(--link-mdn) !important;
 }
 
 /* W3Schools */
 [href*="w3schools.com"] {
-    color: #04aa6d !important;
+    color: var(--link-w3schools) !important;
 }
 
 /* CodePen */
 [href*="codepen.io"] {
-    color: #000000 !important;
+    color: var(--link-codepen) !important;
 }
 
 /* JSFiddle */
 [href*="jsfiddle.net"] {
-    color: #0084ff !important;
+    color: var(--link-jsfiddle) !important;
 }
 
 /* Docker */
 [href*="docker.com"] {
-    color: #2496ed !important;
+    color: var(--link-docker) !important;
 }
 
 /* Kubernetes */
 [href*="kubernetes.io"] {
-    color: #326ce5 !important;
+    color: var(--link-kubernetes) !important;
 }
 
 /* Tailwind CSS */
 [href*="tailwindcss.com"] {
-    color: #06b6d4 !important;
+    color: var(--link-tailwind) !important;
 }
