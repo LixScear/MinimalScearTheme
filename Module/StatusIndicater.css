@@ -293,7 +293,7 @@
    MOBILE INDICATOR STYLING
    ============================================ */
 
-   
+
 /* Mobile indicator sizing for different avatar sizes */
 #app-mount .wrapper__44b0c foreignObject[mask*=mobile][width="24"]:after {
     width: 10px;
@@ -427,11 +427,11 @@
    USER INFO ADJUSTMENTS
    ============================================ */
 
-/* Fine-tune user info avatar positioning */
-#app-mount .userInfo__0a06e .wrapper__44b0c {
+/* Fine-tune user info avatar positioning - margins removed to fix mini profile centering */
+/* #app-mount .userInfo__0a06e .wrapper__44b0c {
     margin-top: 1px;
     margin-left: 1px;
-}
+} */
 
 /* ============================================
    VERSION DISPLAY
