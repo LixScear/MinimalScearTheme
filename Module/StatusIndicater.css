@@ -436,6 +436,16 @@
     justify-content: center !important;
 }
 
+/* Fix status indicator sizing for mini profiles only - make it match avatar size */
+#app-mount .userInfo__0a06e .wrapper__44b0c rect {
+    width: 100% !important;
+    height: 100% !important;
+    /* Center the indicator by using negative positioning */
+    x: -50% !important;
+    y: -50% !important;
+    transform: translate(50%, 50%) !important;
+}
+
 /* ============================================
    VERSION DISPLAY
    ============================================ */
