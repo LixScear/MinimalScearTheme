@@ -444,6 +444,8 @@
     x: -50% !important;
     y: -50% !important;
     transform: translate(50%, 50%) !important;
+    /* Make the stroke much thinner for mini profiles */
+    stroke-width: 1px !important;
 }
 
 /* ============================================
