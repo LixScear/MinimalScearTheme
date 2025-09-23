@@ -398,10 +398,7 @@
     width: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
     height: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
     
-    /* Center the hint */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* Remove positioning that causes movement */
     position: relative;
 }
 
