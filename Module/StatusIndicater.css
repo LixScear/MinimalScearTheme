@@ -198,11 +198,7 @@
    LARGE AVATAR STYLING (80px)
    ============================================ */
 
-/* 80px avatar status rectangle positioning */
-#app-mount .wrapper__44b0c[style*="80px"] svg.cursorDefault__44b0c rect {
-    x: -48;
-    y: -52;
-}
+/* 80px avatar status rectangle positioning - removed conflicting positioning */
 
 /* 80px avatar status rectangle styling */
 #app-mount .wrapper__44b0c[style*="80px"] rect {
@@ -218,11 +214,7 @@
    EXTRA LARGE AVATAR STYLING (120px)
    ============================================ */
 
-/* 120px avatar status rectangle positioning */
-#app-mount .wrapper__44b0c[style*="120px"] svg.cursorDefault__44b0c rect {
-    x: -70;
-    y: -76;
-}
+/* 120px avatar status rectangle positioning - removed conflicting positioning */
 
 /* 120px avatar status rectangle styling */
 #app-mount .wrapper__44b0c[style*="120px"] rect {
@@ -336,10 +328,7 @@
     width: calc(100% + 3px);
 }
 
-/* Typing indicator width adjustment in messages */
-#app-mount .message__5126c .wrapper__44b0c rect[mask*=typing] {
-    width: calc(100% - 9px);
-}
+/* Typing indicator width adjustment in messages - removed conflicting width */
 
 /* ============================================
    AVATAR HINT STYLING
@@ -359,9 +348,9 @@
     /* Remove default padding */
     padding-top: 0;
     
-    /* Calculate dimensions with spacing */
-    width: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
-    height: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
+    /* Use 100% sizing to match profile size */
+    width: 100% !important;
+    height: 100% !important;
     
     /* Remove positioning that causes movement */
     position: relative;
