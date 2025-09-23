@@ -6,7 +6,7 @@
    CSS VARIABLES & VERSION INFO
    ============================================ */
 
-:root {
+   :root {
     /* Status Indicater theme version */
     --rs-version: "1.0.0";
 }
@@ -204,8 +204,8 @@
 #app-mount .wrapper__44b0c[style*="32px"] rect {
     width: 32px;
     height: 32px;
-    x: 0 !important;
-    y: 0 !important;
+    x: -14.5;
+    y: -17;
     position: relative;
     z-index: 0;
 }
@@ -293,7 +293,7 @@
    MOBILE INDICATOR STYLING
    ============================================ */
 
-
+   
 /* Mobile indicator sizing for different avatar sizes */
 #app-mount .wrapper__44b0c foreignObject[mask*=mobile][width="24"]:after {
     width: 10px;
@@ -427,25 +427,10 @@
    USER INFO ADJUSTMENTS
    ============================================ */
 
-/* Fine-tune user info avatar positioning - ensure proper centering */
+/* Fine-tune user info avatar positioning */
 #app-mount .userInfo__0a06e .wrapper__44b0c {
-    margin-top: 0 !important;
-    margin-left: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* Fix status indicator sizing for mini profiles only - make it match avatar size */
-#app-mount .userInfo__0a06e .wrapper__44b0c rect {
-    width: 100% !important;
-    height: 100% !important;
-    /* Center the indicator by using negative positioning */
-    x: -50% !important;
-    y: -50% !important;
-    transform: translate(50%, 50%) !important;
-    /* Make the stroke much thinner for mini profiles */
-    stroke-width: 1px !important;
+    margin-top: 1px;
+    margin-left: 1px;
 }
 
 /* ============================================
