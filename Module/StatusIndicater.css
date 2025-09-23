@@ -118,13 +118,13 @@
     rx: calc(var(--rs-avatar-shape) * 3.3);
 }
 
-/* Base rectangle styling - always match profile size */
+/* Base rectangle styling */
 #app-mount .wrapper__44b0c rect {
     /* Reset positioning */
     x: 0;
     y: 0;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
     
     /* Remove mask and ensure visibility */
     -webkit-mask: none;
@@ -187,7 +187,38 @@
    SIZE-SPECIFIC RECTANGLE POSITIONING
    ============================================ */
 
-/* All status rectangles now use 100% sizing from base rule above */
+/* 24px status rectangles */
+#app-mount .wrapper__44b0c rect[x="16"] {
+    width: 24px;
+    height: 24px;
+}
+
+/* 40px status rectangles */
+#app-mount .wrapper__44b0c rect[x="28"] {
+    width: 40px;
+    height: 40px;
+    overflow: visible;
+}
+
+/* 32px avatar status rectangles */
+#app-mount .wrapper__44b0c[style*="32px"] rect {
+    width: 32px;
+    height: 32px;
+    x: -14.5;
+    y: -17;
+    position: relative;
+    z-index: 0;
+}
+
+/* 40px avatar status rectangles */
+#app-mount .wrapper__44b0c[style*="40px"] > svg > svg rect {
+    width: 40px;
+    height: 40px;
+    x: -19;
+    y: -20;
+    ry: calc(var(--rs-avatar-shape) * 3.3);
+    rx: calc(var(--rs-avatar-shape) * 3.3);
+}
 
 /* Mobile indicator sizing for 40px avatars */
 #app-mount .wrapper__44b0c[style*="40px"] foreignObject[mask*=mobile] img {
@@ -198,10 +229,16 @@
    LARGE AVATAR STYLING (80px)
    ============================================ */
 
-/* 80px avatar status rectangle positioning - removed conflicting positioning */
+/* 80px avatar status rectangle positioning */
+#app-mount .wrapper__44b0c[style*="80px"] svg.cursorDefault__44b0c rect {
+    x: -48;
+    y: -52;
+}
 
 /* 80px avatar status rectangle styling */
 #app-mount .wrapper__44b0c[style*="80px"] rect {
+    width: 80px;
+    height: 80px;
     stroke-width: var(--rs-medium-width);
 }
 
@@ -214,10 +251,16 @@
    EXTRA LARGE AVATAR STYLING (120px)
    ============================================ */
 
-/* 120px avatar status rectangle positioning - removed conflicting positioning */
+/* 120px avatar status rectangle positioning */
+#app-mount .wrapper__44b0c[style*="120px"] svg.cursorDefault__44b0c rect {
+    x: -70;
+    y: -76;
+}
 
 /* 120px avatar status rectangle styling */
 #app-mount .wrapper__44b0c[style*="120px"] rect {
+    width: 120px;
+    height: 120px;
     stroke-width: var(--rs-large-width);
     pointer-events: none;
 }
@@ -250,6 +293,10 @@
    MOBILE INDICATOR STYLING
    ============================================ */
 
+/* Mobile indicator base styling */
+#app-mount .wrapper__44b0c foreignObject[mask*=mobile] {
+    property: inherit;
+}
 
 /* Mobile indicator sizing for different avatar sizes */
 #app-mount .wrapper__44b0c foreignObject[mask*=mobile][width="24"]:after {
@@ -328,7 +375,10 @@
     width: calc(100% + 3px);
 }
 
-/* Typing indicator width adjustment in messages - removed conflicting width */
+/* Typing indicator width adjustment in messages */
+#app-mount .message__5126c .wrapper__44b0c rect[mask*=typing] {
+    width: calc(100% - 9px);
+}
 
 /* ============================================
    AVATAR HINT STYLING
@@ -348,11 +398,14 @@
     /* Remove default padding */
     padding-top: 0;
     
-    /* Use 100% sizing to match profile size */
-    width: 100% !important;
-    height: 100% !important;
+    /* Calculate dimensions with spacing */
+    width: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
+    height: calc(100% - var(--rs-medium-width) - var(--rs-medium-spacing) + 2px);
     
-    /* Remove positioning that causes movement */
+    /* Center the hint */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: relative;
 }
 
@@ -378,11 +431,11 @@
    USER INFO ADJUSTMENTS
    ============================================ */
 
-/* Fine-tune user info avatar positioning - margins removed to fix mini profile centering */
-/* #app-mount .userInfo__0a06e .wrapper__44b0c {
+/* Fine-tune user info avatar positioning */
+#app-mount .userInfo__0a06e .wrapper__44b0c {
     margin-top: 1px;
     margin-left: 1px;
-} */
+}
 
 /* ============================================
    VERSION DISPLAY
