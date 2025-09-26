@@ -58,6 +58,28 @@
     ry: 50%;
 }
 
+/* Hide the small status dot indicators */
+.wrapper__44b0c circle,
+.avatar__0a06e circle,
+.avatar-2Vndt_ circle,
+.avatar-2OC07D circle,
+.avatar__1fed1 circle {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Hide status indicator dots by fill color */
+circle[fill="#43b581"], /* Online green dot */
+circle[fill="#faa61a"], /* Idle yellow dot */
+circle[fill="#f04747"], /* DND red dot */
+circle[fill="#747f8d"], /* Offline/Invisible gray dot */
+circle[fill="#7289da"] { /* Streaming purple dot */
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 /* Remove mask from foreign objects */
 .wrapper__44b0c foreignObject,
 .avatar__0a06e foreignObject,
@@ -93,6 +115,17 @@
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    /* Apply circular border radius to avatars */
+    border-radius: var(--rs-avatar-shape, 50%);
+}
+
+/* Apply border radius to avatar images */
+.wrapper__44b0c img,
+.avatar__0a06e img,
+.avatar-2Vndt_ img,
+.avatar-2OC07D img,
+.avatar__1fed1 img {
+    border-radius: var(--rs-avatar-shape, 50%);
 }
 
 /* ============================================
