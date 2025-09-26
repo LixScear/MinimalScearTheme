@@ -35,34 +35,45 @@
 }
 
 /* ============================================
-   HIDE ORIGINAL DISCORD STATUS INDICATORS
+   TRANSFORM ORIGINAL DISCORD STATUS INDICATORS
    ============================================ */
 
-/* Hide Discord's default status indicators */
-rect[mask*="status"],
-rect[fill="#43b581"], /* Online green */
-rect[fill="#faa61a"], /* Idle yellow */
-rect[fill="#f04747"], /* DND red */
-rect[fill="#747f8d"], /* Offline/Invisible gray */
-.status-2DiCMd,
-foreignObject[mask*="status"],
-/* Additional selectors for better coverage */
-[class*="status"],
-[class*="indicator"],
-[class*="dot"],
-/* Hide status circles and dots */
-circle[fill="#43b581"],
-circle[fill="#faa61a"],
-circle[fill="#f04747"],
-circle[fill="#747f8d"],
-/* Hide status wrapper elements */
-[class*="statusWrapper"],
-[class*="statusIndicator"],
-/* Hide foreign objects with status masks */
-foreignObject[mask*="status"],
-foreignObject[class*="status"] {
-    display: none !important;
-    visibility: hidden !important;
+/* Transform Discord's default status indicators into stroke borders */
+.wrapper__44b0c rect,
+.avatar__0a06e rect,
+.avatar-2Vndt_ rect,
+.avatar-2OC07D rect,
+.avatar__1fed1 rect {
+    /* Remove mask and ensure visibility */
+    -webkit-mask: none;
+    mask: none;
+    display: block;
+    
+    /* Transparent fill with stroke */
+    fill: transparent !important;
+    stroke-width: 3px;
+    
+    /* Apply border radius */
+    rx: 50%;
+    ry: 50%;
+}
+
+/* Remove mask from foreign objects */
+.wrapper__44b0c foreignObject,
+.avatar__0a06e foreignObject,
+.avatar-2Vndt_ foreignObject,
+.avatar-2OC07D foreignObject,
+.avatar__1fed1 foreignObject {
+    -webkit-mask: none;
+    mask: none;
+}
+
+/* Hide mask circle */
+.wrapper__44b0c .mask__44b0c > circle,
+.avatar__0a06e .mask__44b0c > circle,
+.avatar-2Vndt_ .mask__44b0c > circle,
+.avatar-2OC07D .mask__44b0c > circle,
+.avatar__1fed1 .mask__44b0c > circle {
     opacity: 0 !important;
 }
 
@@ -88,7 +99,7 @@ foreignObject[class*="status"] {
    ONLINE STATUS HALO
    ============================================ */
 
-/* Online status - Green halo */
+/* Online status - Green halo and stroke */
 .wrapper__44b0c[aria-label*="Online"],
 .avatar__0a06e[aria-label*="Online"],
 .avatar-2Vndt_[aria-label*="Online"],
@@ -99,11 +110,20 @@ foreignObject[class*="status"] {
         0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(67, 181, 129, calc(var(--halo-opacity) * 0.5));
 }
 
+/* Online status stroke color */
+.wrapper__44b0c[aria-label*="Online"] rect,
+.avatar__0a06e[aria-label*="Online"] rect,
+.avatar-2Vndt_[aria-label*="Online"] rect,
+.avatar-2OC07D[aria-label*="Online"] rect,
+.avatar__1fed1[aria-label*="Online"] rect {
+    stroke: #43b581;
+}
+
 /* ============================================
    OFFLINE STATUS HALO
    ============================================ */
 
-/* Offline status - Gray halo */
+/* Offline status - Gray halo and stroke */
 .wrapper__44b0c[aria-label*="Offline"],
 .avatar__0a06e[aria-label*="Offline"],
 .avatar-2Vndt_[aria-label*="Offline"],
@@ -114,11 +134,20 @@ foreignObject[class*="status"] {
         0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.3));
 }
 
+/* Offline status stroke color */
+.wrapper__44b0c[aria-label*="Offline"] rect,
+.avatar__0a06e[aria-label*="Offline"] rect,
+.avatar-2Vndt_[aria-label*="Offline"] rect,
+.avatar-2OC07D[aria-label*="Offline"] rect,
+.avatar__1fed1[aria-label*="Offline"] rect {
+    stroke: #747f8d;
+}
+
 /* ============================================
    IDLE STATUS HALO
    ============================================ */
 
-/* Idle status - Yellow halo */
+/* Idle status - Yellow halo and stroke */
 .wrapper__44b0c[aria-label*="Idle"],
 .avatar__0a06e[aria-label*="Idle"],
 .avatar-2Vndt_[aria-label*="Idle"],
@@ -129,11 +158,20 @@ foreignObject[class*="status"] {
         0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(250, 166, 26, calc(var(--halo-opacity) * 0.5));
 }
 
+/* Idle status stroke color */
+.wrapper__44b0c[aria-label*="Idle"] rect,
+.avatar__0a06e[aria-label*="Idle"] rect,
+.avatar-2Vndt_[aria-label*="Idle"] rect,
+.avatar-2OC07D[aria-label*="Idle"] rect,
+.avatar__1fed1[aria-label*="Idle"] rect {
+    stroke: #faa61a;
+}
+
 /* ============================================
    DO NOT DISTURB STATUS HALO
    ============================================ */
 
-/* Do Not Disturb status - Red halo */
+/* Do Not Disturb status - Red halo and stroke */
 .wrapper__44b0c[aria-label*="Do Not Disturb"],
 .avatar__0a06e[aria-label*="Do Not Disturb"],
 .avatar-2Vndt_[aria-label*="Do Not Disturb"],
@@ -144,11 +182,20 @@ foreignObject[class*="status"] {
         0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(240, 71, 71, calc(var(--halo-opacity) * 0.5));
 }
 
+/* Do Not Disturb status stroke color */
+.wrapper__44b0c[aria-label*="Do Not Disturb"] rect,
+.avatar__0a06e[aria-label*="Do Not Disturb"] rect,
+.avatar-2Vndt_[aria-label*="Do Not Disturb"] rect,
+.avatar-2OC07D[aria-label*="Do Not Disturb"] rect,
+.avatar__1fed1[aria-label*="Do Not Disturb"] rect {
+    stroke: #f04747;
+}
+
 /* ============================================
    INVISIBLE STATUS HALO
    ============================================ */
 
-/* Invisible status - Purple halo */
+/* Invisible status - Purple halo and stroke */
 .wrapper__44b0c[aria-label*="Invisible"],
 .avatar__0a06e[aria-label*="Invisible"],
 .avatar-2Vndt_[aria-label*="Invisible"],
@@ -159,11 +206,20 @@ foreignObject[class*="status"] {
         0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.4));
 }
 
+/* Invisible status stroke color */
+.wrapper__44b0c[aria-label*="Invisible"] rect,
+.avatar__0a06e[aria-label*="Invisible"] rect,
+.avatar-2Vndt_[aria-label*="Invisible"] rect,
+.avatar-2OC07D[aria-label*="Invisible"] rect,
+.avatar__1fed1[aria-label*="Invisible"] rect {
+    stroke: #747f8d;
+}
+
 /* ============================================
    STREAMING STATUS HALO
    ============================================ */
 
-/* Streaming status - Purple halo (enhanced) */
+/* Streaming status - Purple halo and stroke (enhanced) */
 .wrapper__44b0c[aria-label*="Streaming"],
 .avatar__0a06e[aria-label*="Streaming"],
 .avatar-2Vndt_[aria-label*="Streaming"],
@@ -172,6 +228,15 @@ foreignObject[class*="status"] {
     box-shadow: 
         0 0 var(--halo-blur) var(--halo-spread) rgba(114, 137, 218, var(--halo-opacity)),
         0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(114, 137, 218, calc(var(--halo-opacity) * 0.5));
+}
+
+/* Streaming status stroke color */
+.wrapper__44b0c[aria-label*="Streaming"] rect,
+.avatar__0a06e[aria-label*="Streaming"] rect,
+.avatar-2Vndt_[aria-label*="Streaming"] rect,
+.avatar-2OC07D[aria-label*="Streaming"] rect,
+.avatar__1fed1[aria-label*="Streaming"] rect {
+    stroke: #7289da;
 }
 
 /* ============================================
@@ -216,23 +281,8 @@ html.theme-light .avatar__1fed1 {
 }
 
 /* ============================================
-   FORCE HIDE STATUS INDICATORS DURING TYPING
+   ENSURE STATUS INDICATORS WORK DURING TYPING
    ============================================ */
-
-/* Additional rules to ensure status indicators stay hidden during typing */
-[class*="typing"] [class*="status"],
-[class*="typing"] [class*="indicator"],
-[class*="typing"] [class*="dot"],
-[class*="typing"] rect[mask*="status"],
-[class*="typing"] circle[fill="#43b581"],
-[class*="typing"] circle[fill="#faa61a"],
-[class*="typing"] circle[fill="#f04747"],
-[class*="typing"] circle[fill="#747f8d"],
-[class*="typing"] foreignObject[mask*="status"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-}
 
 /* Ensure avatars remain visible during typing */
 [class*="typing"] .wrapper__44b0c,
@@ -243,6 +293,17 @@ html.theme-light .avatar__1fed1 {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+}
+
+/* Ensure status rectangles work during typing */
+[class*="typing"] .wrapper__44b0c rect,
+[class*="typing"] .avatar__0a06e rect,
+[class*="typing"] .avatar-2Vndt_ rect,
+[class*="typing"] .avatar-2OC07D rect,
+[class*="typing"] .avatar__1fed1 rect {
+    fill: transparent !important;
+    stroke-width: 3px;
+    display: block !important;
 }
 
 /* ============================================
