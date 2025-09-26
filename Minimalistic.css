@@ -886,6 +886,10 @@ html.theme-light .mentioned__5126c {
     color: #cc0000 !important;
 }
 
+html.theme-light .mentioned__5126c * {
+    color: #cc0000 !important;
+}
+
 html.theme-dark .mentioned__5126c:hover {
     background: linear-gradient(
             60deg,
@@ -900,6 +904,10 @@ html.theme-light .mentioned__5126c:hover {
             rgba(228, 228, 228, 0.5),
             rgba(var(--accentcolor))
     ) !important;
+    color: #cc0000 !important;
+}
+
+html.theme-light .mentioned__5126c:hover * {
     color: #cc0000 !important;
 }
 
