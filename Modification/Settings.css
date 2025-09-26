@@ -484,22 +484,28 @@ html.theme-dark .fieldSpacerBottom__1fed1 {
 }
 
 /* Dark theme button colors */
+/*
 html.theme-dark .button__6af3a {
     background: rgb(36, 36, 36) !important;
     color: rgb(255, 255, 255) !important;
 }
+*/
 
 /* Light theme button colors */
+/*
 html.theme-light .button__6af3a {
     background: #fff !important;
     color: #000 !important;
 }
+*/
 
 /* Button hover effect */
+/*
 .button__6af3a:hover {
     background: rgb(0, 0, 0) !important;
     transition: 0.1s;
 }
+*/
 
 /* Dark theme button hover shadow */
 html.theme-dark .button__6af3a:hover {

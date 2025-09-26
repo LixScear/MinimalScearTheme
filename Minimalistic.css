@@ -324,22 +324,28 @@ html.theme-light .scrollbar__506b3 {
 }
 
 /* Dark theme button styling */
+/*
 html.theme-dark .lookFilled__201d5 {
     background: rgb(36, 36, 36) !important;
     color: rgb(255, 255, 255) !important;
 }
+*/
 
 /* Light theme button styling */
+/*
 html.theme-light .lookFilled__201d5 {
     background: #fff !important;
     color: #000 !important;
 }
+*/
 
 /* Button hover effects */
+/*
 .lookFilled__201d5:hover {
     background: rgb(0, 0, 0) !important;
     transition: 0.1s;
 }
+*/
 
 /* Dark theme hover shadow */
 html.theme-dark .lookFilled__201d5:hover {
