@@ -21,8 +21,11 @@
    @import url("https://Lixscear.github.io/MinimalScearTheme/Module/ServerUserSideBar.css");
    
    /* Status Indicater */
-   @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css");
+   /* @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicater.css"); */
    
+   /* Status Indicater V2 */
+   @import url("https://Lixscear.github.io/MinimalScearTheme/Module/StatusIndicaterV2.css");
+
    /* Horizontal Server List Bottom */
    @import url("https://Lixscear.github.io/MinimalScearTheme/ServerList/src/addons/HorizontalServerBottom.css");
    

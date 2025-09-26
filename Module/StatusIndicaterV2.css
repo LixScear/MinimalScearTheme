@@ -1,0 +1,300 @@
+/* ============================================
+   STATUS INDICATOR HALO EFFECTS V2
+   ============================================
+   
+   Custom halo effects around user profiles to indicate status:
+   - Online: Green glow
+   - Offline: Gray glow  
+   - Idle: Yellow glow
+   - Do Not Disturb: Red glow
+   - Invisible: Purple glow
+   
+   ============================================ */
+
+/* ============================================
+   CSS VARIABLES FOR STATUS COLORS
+   ============================================ */
+
+:root {
+    /* Status halo colors */
+    --status-online-halo: #43b581;
+    --status-offline-halo: #747f8d;
+    --status-idle-halo: #faa61a;
+    --status-dnd-halo: #f04747;
+    --status-invisible-halo: #747f8d;
+    
+    /* Halo intensity and size */
+    --halo-blur: 8px;
+    --halo-spread: 4px;
+    --halo-opacity: 0.8;
+    
+    /* Animation properties */
+    --halo-animation-duration: 2s;
+    --halo-pulse-scale: 1.1;
+}
+
+/* ============================================
+   BASE HALO EFFECT STYLES
+   ============================================ */
+
+/* Apply halo to all status indicators */
+.wrapper__44b0c,
+.avatar__0a06e,
+.avatar-2Vndt_,
+.avatar-2OC07D,
+.avatar__1fed1 {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   ONLINE STATUS HALO
+   ============================================ */
+
+/* Online status - Green halo */
+.wrapper__44b0c[aria-label*="Online"],
+.avatar__0a06e[aria-label*="Online"],
+.avatar-2Vndt_[aria-label*="Online"],
+.avatar-2OC07D[aria-label*="Online"],
+.avatar__1fed1[aria-label*="Online"] {
+    box-shadow: 
+        0 0 var(--halo-blur) var(--halo-spread) rgba(67, 181, 129, var(--halo-opacity)),
+        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(67, 181, 129, calc(var(--halo-opacity) * 0.5));
+    animation: halo-pulse-online var(--halo-animation-duration) ease-in-out infinite;
+}
+
+@keyframes halo-pulse-online {
+    0%, 100% {
+        box-shadow: 
+            0 0 var(--halo-blur) var(--halo-spread) rgba(67, 181, 129, var(--halo-opacity)),
+            0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(67, 181, 129, calc(var(--halo-opacity) * 0.5));
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 calc(var(--halo-blur) * 1.2) calc(var(--halo-spread) * 1.2) rgba(67, 181, 129, calc(var(--halo-opacity) * 1.2)),
+            0 0 calc(var(--halo-blur) * 2.4) calc(var(--halo-spread) * 2.4) rgba(67, 181, 129, calc(var(--halo-opacity) * 0.8));
+        transform: scale(var(--halo-pulse-scale));
+    }
+}
+
+/* ============================================
+   OFFLINE STATUS HALO
+   ============================================ */
+
+/* Offline status - Gray halo */
+.wrapper__44b0c[aria-label*="Offline"],
+.avatar__0a06e[aria-label*="Offline"],
+.avatar-2Vndt_[aria-label*="Offline"],
+.avatar-2OC07D[aria-label*="Offline"],
+.avatar__1fed1[aria-label*="Offline"] {
+    box-shadow: 
+        0 0 var(--halo-blur) var(--halo-spread) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.6)),
+        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.3));
+    animation: halo-pulse-offline var(--halo-animation-duration) ease-in-out infinite;
+}
+
+@keyframes halo-pulse-offline {
+    0%, 100% {
+        box-shadow: 
+            0 0 var(--halo-blur) var(--halo-spread) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.6)),
+            0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.3));
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 calc(var(--halo-blur) * 1.1) calc(var(--halo-spread) * 1.1) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.8)),
+            0 0 calc(var(--halo-blur) * 2.2) calc(var(--halo-spread) * 2.2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.5));
+        transform: scale(1.02);
+    }
+}
+
+/* ============================================
+   IDLE STATUS HALO
+   ============================================ */
+
+/* Idle status - Yellow halo */
+.wrapper__44b0c[aria-label*="Idle"],
+.avatar__0a06e[aria-label*="Idle"],
+.avatar-2Vndt_[aria-label*="Idle"],
+.avatar-2OC07D[aria-label*="Idle"],
+.avatar__1fed1[aria-label*="Idle"] {
+    box-shadow: 
+        0 0 var(--halo-blur) var(--halo-spread) rgba(250, 166, 26, var(--halo-opacity)),
+        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(250, 166, 26, calc(var(--halo-opacity) * 0.5));
+    animation: halo-pulse-idle var(--halo-animation-duration) ease-in-out infinite;
+}
+
+@keyframes halo-pulse-idle {
+    0%, 100% {
+        box-shadow: 
+            0 0 var(--halo-blur) var(--halo-spread) rgba(250, 166, 26, var(--halo-opacity)),
+            0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(250, 166, 26, calc(var(--halo-opacity) * 0.5));
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 calc(var(--halo-blur) * 1.3) calc(var(--halo-spread) * 1.3) rgba(250, 166, 26, calc(var(--halo-opacity) * 1.3)),
+            0 0 calc(var(--halo-blur) * 2.6) calc(var(--halo-spread) * 2.6) rgba(250, 166, 26, calc(var(--halo-opacity) * 0.8));
+        transform: scale(var(--halo-pulse-scale));
+    }
+}
+
+/* ============================================
+   DO NOT DISTURB STATUS HALO
+   ============================================ */
+
+/* Do Not Disturb status - Red halo */
+.wrapper__44b0c[aria-label*="Do Not Disturb"],
+.avatar__0a06e[aria-label*="Do Not Disturb"],
+.avatar-2Vndt_[aria-label*="Do Not Disturb"],
+.avatar-2OC07D[aria-label*="Do Not Disturb"],
+.avatar__1fed1[aria-label*="Do Not Disturb"] {
+    box-shadow: 
+        0 0 var(--halo-blur) var(--halo-spread) rgba(240, 71, 71, var(--halo-opacity)),
+        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(240, 71, 71, calc(var(--halo-opacity) * 0.5));
+    animation: halo-pulse-dnd var(--halo-animation-duration) ease-in-out infinite;
+}
+
+@keyframes halo-pulse-dnd {
+    0%, 100% {
+        box-shadow: 
+            0 0 var(--halo-blur) var(--halo-spread) rgba(240, 71, 71, var(--halo-opacity)),
+            0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(240, 71, 71, calc(var(--halo-opacity) * 0.5));
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 calc(var(--halo-blur) * 1.4) calc(var(--halo-spread) * 1.4) rgba(240, 71, 71, calc(var(--halo-opacity) * 1.4)),
+            0 0 calc(var(--halo-blur) * 2.8) calc(var(--halo-spread) * 2.8) rgba(240, 71, 71, calc(var(--halo-opacity) * 0.9));
+        transform: scale(var(--halo-pulse-scale));
+    }
+}
+
+/* ============================================
+   INVISIBLE STATUS HALO
+   ============================================ */
+
+/* Invisible status - Purple halo */
+.wrapper__44b0c[aria-label*="Invisible"],
+.avatar__0a06e[aria-label*="Invisible"],
+.avatar-2Vndt_[aria-label*="Invisible"],
+.avatar-2OC07D[aria-label*="Invisible"],
+.avatar__1fed1[aria-label*="Invisible"] {
+    box-shadow: 
+        0 0 var(--halo-blur) var(--halo-spread) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.7)),
+        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.4));
+    animation: halo-pulse-invisible var(--halo-animation-duration) ease-in-out infinite;
+}
+
+@keyframes halo-pulse-invisible {
+    0%, 100% {
+        box-shadow: 
+            0 0 var(--halo-blur) var(--halo-spread) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.7)),
+            0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.4));
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 calc(var(--halo-blur) * 1.1) calc(var(--halo-spread) * 1.1) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.9)),
+            0 0 calc(var(--halo-blur) * 2.2) calc(var(--halo-spread) * 2.2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.6));
+        transform: scale(1.01);
+    }
+}
+
+/* ============================================
+   STREAMING STATUS HALO
+   ============================================ */
+
+/* Streaming status - Purple halo (enhanced) */
+.wrapper__44b0c[aria-label*="Streaming"],
+.avatar__0a06e[aria-label*="Streaming"],
+.avatar-2Vndt_[aria-label*="Streaming"],
+.avatar-2OC07D[aria-label*="Streaming"],
+.avatar__1fed1[aria-label*="Streaming"] {
+    box-shadow: 
+        0 0 var(--halo-blur) var(--halo-spread) rgba(114, 137, 218, var(--halo-opacity)),
+        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(114, 137, 218, calc(var(--halo-opacity) * 0.5));
+    animation: halo-pulse-streaming var(--halo-animation-duration) ease-in-out infinite;
+}
+
+@keyframes halo-pulse-streaming {
+    0%, 100% {
+        box-shadow: 
+            0 0 var(--halo-blur) var(--halo-spread) rgba(114, 137, 218, var(--halo-opacity)),
+            0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(114, 137, 218, calc(var(--halo-opacity) * 0.5));
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 
+            0 0 calc(var(--halo-blur) * 1.5) calc(var(--halo-spread) * 1.5) rgba(114, 137, 218, calc(var(--halo-opacity) * 1.5)),
+            0 0 calc(var(--halo-blur) * 3) calc(var(--halo-spread) * 3) rgba(114, 137, 218, calc(var(--halo-opacity) * 1));
+        transform: scale(1.05);
+    }
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+
+/* Enhanced halo on hover */
+.wrapper__44b0c:hover,
+.avatar__0a06e:hover,
+.avatar-2Vndt_:hover,
+.avatar-2OC07D:hover,
+.avatar__1fed1:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+/* ============================================
+   LIGHT THEME ADJUSTMENTS
+   ============================================ */
+
+/* Adjust halo opacity for light theme */
+html.theme-light .wrapper__44b0c,
+html.theme-light .avatar__0a06e,
+html.theme-light .avatar-2Vndt_,
+html.theme-light .avatar-2OC07D,
+html.theme-light .avatar__1fed1 {
+    --halo-opacity: 0.6;
+}
+
+/* ============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================ */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .wrapper__44b0c,
+    .avatar__0a06e,
+    .avatar-2Vndt_,
+    .avatar-2OC07D,
+    .avatar__1fed1 {
+        animation: none;
+    }
+}
+
+/* ============================================
+   CUSTOMIZATION VARIABLES
+   ============================================ */
+
+/* Users can override these variables to customize the halo effects */
+:root {
+    /* Customize halo intensity */
+    --halo-blur: 8px;
+    --halo-spread: 4px;
+    --halo-opacity: 0.8;
+    
+    /* Customize animation speed */
+    --halo-animation-duration: 2s;
+    --halo-pulse-scale: 1.1;
+    
+    /* Customize colors (users can override these) */
+    --status-online-halo: #43b581;
+    --status-offline-halo: #747f8d;
+    --status-idle-halo: #faa61a;
+    --status-dnd-halo: #f04747;
+    --status-invisible-halo: #747f8d;
+    --status-streaming-halo: #7289da;
+}
