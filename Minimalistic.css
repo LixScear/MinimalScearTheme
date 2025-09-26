@@ -886,11 +886,11 @@ html.theme-light .mentioned__5126c {
 }
 
 html.theme-light .mentioned__5126c [class*="mention"] {
-    color: #cc0000 !important;
+    color: #404040 !important;
 }
 
 html.theme-light .mentioned__5126c [data-user-id] {
-    color: #cc0000 !important;
+    color: #404040 !important;
 }
 
 html.theme-dark .mentioned__5126c:hover {
@@ -910,11 +910,11 @@ html.theme-light .mentioned__5126c:hover {
 }
 
 html.theme-light .mentioned__5126c:hover [class*="mention"] {
-    color: #cc0000 !important;
+    color: #404040 !important;
 }
 
 html.theme-light .mentioned__5126c:hover [data-user-id] {
-    color: #cc0000 !important;
+    color: #404040 !important;
 }
 
 /*user popout animation*/
