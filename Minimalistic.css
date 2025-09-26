@@ -885,11 +885,10 @@ html.theme-light .mentioned__5126c {
     ) !important;
 }
 
-html.theme-light .mentioned__5126c [class*="mention"] {
-    color: #404040 !important;
-}
-
-html.theme-light .mentioned__5126c [data-user-id] {
+html.theme-light .mentioned__5126c [class*="mention"],
+html.theme-light .mentioned__5126c [class*="mention"] *,
+html.theme-light .mentioned__5126c [data-user-id],
+html.theme-light .mentioned__5126c [data-user-id] * {
     color: #404040 !important;
 }
 
@@ -909,11 +908,10 @@ html.theme-light .mentioned__5126c:hover {
     ) !important;
 }
 
-html.theme-light .mentioned__5126c:hover [class*="mention"] {
-    color: #404040 !important;
-}
-
-html.theme-light .mentioned__5126c:hover [data-user-id] {
+html.theme-light .mentioned__5126c:hover [class*="mention"],
+html.theme-light .mentioned__5126c:hover [class*="mention"] *,
+html.theme-light .mentioned__5126c:hover [data-user-id],
+html.theme-light .mentioned__5126c:hover [data-user-id] * {
     color: #404040 !important;
 }
 
