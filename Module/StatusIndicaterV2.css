@@ -45,8 +45,25 @@ rect[fill="#faa61a"], /* Idle yellow */
 rect[fill="#f04747"], /* DND red */
 rect[fill="#747f8d"], /* Offline/Invisible gray */
 .status-2DiCMd,
-foreignObject[mask*="status"] {
+foreignObject[mask*="status"],
+/* Additional selectors for better coverage */
+[class*="status"],
+[class*="indicator"],
+[class*="dot"],
+/* Hide status circles and dots */
+circle[fill="#43b581"],
+circle[fill="#faa61a"],
+circle[fill="#f04747"],
+circle[fill="#747f8d"],
+/* Hide status wrapper elements */
+[class*="statusWrapper"],
+[class*="statusIndicator"],
+/* Hide foreign objects with status masks */
+foreignObject[mask*="status"],
+foreignObject[class*="status"] {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
 /* ============================================
@@ -61,6 +78,10 @@ foreignObject[mask*="status"] {
 .avatar__1fed1 {
     position: relative;
     transition: all 0.3s ease;
+    /* Ensure profiles remain visible */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* ============================================
@@ -192,6 +213,36 @@ html.theme-light .avatar__1fed1 {
     .avatar__1fed1 {
         transition: none;
     }
+}
+
+/* ============================================
+   FORCE HIDE STATUS INDICATORS DURING TYPING
+   ============================================ */
+
+/* Additional rules to ensure status indicators stay hidden during typing */
+[class*="typing"] [class*="status"],
+[class*="typing"] [class*="indicator"],
+[class*="typing"] [class*="dot"],
+[class*="typing"] rect[mask*="status"],
+[class*="typing"] circle[fill="#43b581"],
+[class*="typing"] circle[fill="#faa61a"],
+[class*="typing"] circle[fill="#f04747"],
+[class*="typing"] circle[fill="#747f8d"],
+[class*="typing"] foreignObject[mask*="status"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Ensure avatars remain visible during typing */
+[class*="typing"] .wrapper__44b0c,
+[class*="typing"] .avatar__0a06e,
+[class*="typing"] .avatar-2Vndt_,
+[class*="typing"] .avatar-2OC07D,
+[class*="typing"] .avatar__1fed1 {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 /* ============================================
