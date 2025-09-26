@@ -885,7 +885,11 @@ html.theme-light .mentioned__5126c {
     ) !important;
 }
 
-html.theme-light .mentioned__5126c .mention {
+html.theme-light .mentioned__5126c [class*="mention"] {
+    color: #cc0000 !important;
+}
+
+html.theme-light .mentioned__5126c [data-user-id] {
     color: #cc0000 !important;
 }
 
@@ -905,7 +909,11 @@ html.theme-light .mentioned__5126c:hover {
     ) !important;
 }
 
-html.theme-light .mentioned__5126c:hover .mention {
+html.theme-light .mentioned__5126c:hover [class*="mention"] {
+    color: #cc0000 !important;
+}
+
+html.theme-light .mentioned__5126c:hover [data-user-id] {
     color: #cc0000 !important;
 }
 
