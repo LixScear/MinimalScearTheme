@@ -1,13 +1,13 @@
 /* ============================================
-   STATUS INDICATOR HALO EFFECTS V2
+   STATUS INDICATOR STROKE BORDERS V2
    ============================================
    
-   Custom halo effects around user profiles to indicate status:
-   - Online: Green glow
-   - Offline: Gray glow  
-   - Idle: Yellow glow
-   - Do Not Disturb: Red glow
-   - Invisible: Purple glow
+   Custom stroke borders around user profiles to indicate status:
+   - Online: Green stroke
+   - Offline: Gray stroke  
+   - Idle: Yellow stroke
+   - Do Not Disturb: Red stroke
+   - Invisible: Gray stroke
    
    Also hides original Discord status indicators
    
@@ -18,20 +18,13 @@
    ============================================ */
 
    :root {
-    /* Status halo colors */
-    --status-online-halo: #43b581;
-    --status-offline-halo: #747f8d;
-    --status-idle-halo: #faa61a;
-    --status-dnd-halo: #f04747;
-    --status-invisible-halo: #747f8d;
-    
-    /* Halo intensity and size */
-    --halo-blur: 8px;
-    --halo-spread: 4px;
-    --halo-opacity: 0.8;
-    
-    /* Animation properties */
-    --halo-animation-duration: 2s;
+    /* Status stroke colors */
+    --status-online-stroke: #43b581;
+    --status-offline-stroke: #747f8d;
+    --status-idle-stroke: #faa61a;
+    --status-dnd-stroke: #f04747;
+    --status-invisible-stroke: #747f8d;
+    --status-streaming-stroke: #7289da;
 }
 
 /* ============================================
@@ -100,10 +93,10 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 }
 
 /* ============================================
-   BASE HALO EFFECT STYLES
+   BASE STROKE BORDER STYLES
    ============================================ */
 
-/* Apply halo to all status indicators */
+/* Apply stroke borders to all status indicators */
 .wrapper__44b0c,
 .avatar__0a06e,
 .avatar-2Vndt_,
@@ -129,19 +122,8 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 }
 
 /* ============================================
-   ONLINE STATUS HALO
+   ONLINE STATUS STROKE
    ============================================ */
-
-/* Online status - Green halo and stroke */
-.wrapper__44b0c[aria-label*="Online"],
-.avatar__0a06e[aria-label*="Online"],
-.avatar-2Vndt_[aria-label*="Online"],
-.avatar-2OC07D[aria-label*="Online"],
-.avatar__1fed1[aria-label*="Online"] {
-    box-shadow: 
-        0 0 var(--halo-blur) var(--halo-spread) rgba(67, 181, 129, var(--halo-opacity)),
-        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(67, 181, 129, calc(var(--halo-opacity) * 0.5));
-}
 
 /* Online status stroke color */
 .wrapper__44b0c[aria-label*="Online"] rect,
@@ -149,23 +131,12 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 .avatar-2Vndt_[aria-label*="Online"] rect,
 .avatar-2OC07D[aria-label*="Online"] rect,
 .avatar__1fed1[aria-label*="Online"] rect {
-    stroke: #43b581;
+    stroke: var(--status-online-stroke);
 }
 
 /* ============================================
-   OFFLINE STATUS HALO
+   OFFLINE STATUS STROKE
    ============================================ */
-
-/* Offline status - Gray halo and stroke */
-.wrapper__44b0c[aria-label*="Offline"],
-.avatar__0a06e[aria-label*="Offline"],
-.avatar-2Vndt_[aria-label*="Offline"],
-.avatar-2OC07D[aria-label*="Offline"],
-.avatar__1fed1[aria-label*="Offline"] {
-    box-shadow: 
-        0 0 var(--halo-blur) var(--halo-spread) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.6)),
-        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.3));
-}
 
 /* Offline status stroke color */
 .wrapper__44b0c[aria-label*="Offline"] rect,
@@ -173,23 +144,12 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 .avatar-2Vndt_[aria-label*="Offline"] rect,
 .avatar-2OC07D[aria-label*="Offline"] rect,
 .avatar__1fed1[aria-label*="Offline"] rect {
-    stroke: #747f8d;
+    stroke: var(--status-offline-stroke);
 }
 
 /* ============================================
-   IDLE STATUS HALO
+   IDLE STATUS STROKE
    ============================================ */
-
-/* Idle status - Yellow halo and stroke */
-.wrapper__44b0c[aria-label*="Idle"],
-.avatar__0a06e[aria-label*="Idle"],
-.avatar-2Vndt_[aria-label*="Idle"],
-.avatar-2OC07D[aria-label*="Idle"],
-.avatar__1fed1[aria-label*="Idle"] {
-    box-shadow: 
-        0 0 var(--halo-blur) var(--halo-spread) rgba(250, 166, 26, var(--halo-opacity)),
-        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(250, 166, 26, calc(var(--halo-opacity) * 0.5));
-}
 
 /* Idle status stroke color */
 .wrapper__44b0c[aria-label*="Idle"] rect,
@@ -197,23 +157,12 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 .avatar-2Vndt_[aria-label*="Idle"] rect,
 .avatar-2OC07D[aria-label*="Idle"] rect,
 .avatar__1fed1[aria-label*="Idle"] rect {
-    stroke: #faa61a;
+    stroke: var(--status-idle-stroke);
 }
 
 /* ============================================
-   DO NOT DISTURB STATUS HALO
+   DO NOT DISTURB STATUS STROKE
    ============================================ */
-
-/* Do Not Disturb status - Red halo and stroke */
-.wrapper__44b0c[aria-label*="Do Not Disturb"],
-.avatar__0a06e[aria-label*="Do Not Disturb"],
-.avatar-2Vndt_[aria-label*="Do Not Disturb"],
-.avatar-2OC07D[aria-label*="Do Not Disturb"],
-.avatar__1fed1[aria-label*="Do Not Disturb"] {
-    box-shadow: 
-        0 0 var(--halo-blur) var(--halo-spread) rgba(240, 71, 71, var(--halo-opacity)),
-        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(240, 71, 71, calc(var(--halo-opacity) * 0.5));
-}
 
 /* Do Not Disturb status stroke color */
 .wrapper__44b0c[aria-label*="Do Not Disturb"] rect,
@@ -221,23 +170,12 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 .avatar-2Vndt_[aria-label*="Do Not Disturb"] rect,
 .avatar-2OC07D[aria-label*="Do Not Disturb"] rect,
 .avatar__1fed1[aria-label*="Do Not Disturb"] rect {
-    stroke: #f04747;
+    stroke: var(--status-dnd-stroke);
 }
 
 /* ============================================
-   INVISIBLE STATUS HALO
+   INVISIBLE STATUS STROKE
    ============================================ */
-
-/* Invisible status - Purple halo and stroke */
-.wrapper__44b0c[aria-label*="Invisible"],
-.avatar__0a06e[aria-label*="Invisible"],
-.avatar-2Vndt_[aria-label*="Invisible"],
-.avatar-2OC07D[aria-label*="Invisible"],
-.avatar__1fed1[aria-label*="Invisible"] {
-    box-shadow: 
-        0 0 var(--halo-blur) var(--halo-spread) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.7)),
-        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(116, 127, 141, calc(var(--halo-opacity) * 0.4));
-}
 
 /* Invisible status stroke color */
 .wrapper__44b0c[aria-label*="Invisible"] rect,
@@ -245,23 +183,12 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 .avatar-2Vndt_[aria-label*="Invisible"] rect,
 .avatar-2OC07D[aria-label*="Invisible"] rect,
 .avatar__1fed1[aria-label*="Invisible"] rect {
-    stroke: #747f8d;
+    stroke: var(--status-invisible-stroke);
 }
 
 /* ============================================
-   STREAMING STATUS HALO
+   STREAMING STATUS STROKE
    ============================================ */
-
-/* Streaming status - Purple halo and stroke (enhanced) */
-.wrapper__44b0c[aria-label*="Streaming"],
-.avatar__0a06e[aria-label*="Streaming"],
-.avatar-2Vndt_[aria-label*="Streaming"],
-.avatar-2OC07D[aria-label*="Streaming"],
-.avatar__1fed1[aria-label*="Streaming"] {
-    box-shadow: 
-        0 0 var(--halo-blur) var(--halo-spread) rgba(114, 137, 218, var(--halo-opacity)),
-        0 0 calc(var(--halo-blur) * 2) calc(var(--halo-spread) * 2) rgba(114, 137, 218, calc(var(--halo-opacity) * 0.5));
-}
 
 /* Streaming status stroke color */
 .wrapper__44b0c[aria-label*="Streaming"] rect,
@@ -269,33 +196,20 @@ circle[fill="#7289da"] { /* Streaming purple dot */
 .avatar-2Vndt_[aria-label*="Streaming"] rect,
 .avatar-2OC07D[aria-label*="Streaming"] rect,
 .avatar__1fed1[aria-label*="Streaming"] rect {
-    stroke: #7289da;
+    stroke: var(--status-streaming-stroke);
 }
 
 /* ============================================
    HOVER EFFECTS
    ============================================ */
 
-/* Enhanced halo on hover */
+/* Smooth transitions on hover */
 .wrapper__44b0c:hover,
 .avatar__0a06e:hover,
 .avatar-2Vndt_:hover,
 .avatar-2OC07D:hover,
 .avatar__1fed1:hover {
     transition: all 0.2s ease;
-}
-
-/* ============================================
-   LIGHT THEME ADJUSTMENTS
-   ============================================ */
-
-/* Adjust halo opacity for light theme */
-html.theme-light .wrapper__44b0c,
-html.theme-light .avatar__0a06e,
-html.theme-light .avatar-2Vndt_,
-html.theme-light .avatar-2OC07D,
-html.theme-light .avatar__1fed1 {
-    --halo-opacity: 0.6;
 }
 
 /* ============================================
@@ -343,21 +257,13 @@ html.theme-light .avatar__1fed1 {
    CUSTOMIZATION VARIABLES
    ============================================ */
 
-/* Users can override these variables to customize the halo effects */
+/* Users can override these variables to customize the stroke colors */
 :root {
-    /* Customize halo intensity */
-    --halo-blur: 8px;
-    --halo-spread: 4px;
-    --halo-opacity: 0.8;
-    
-    /* Customize animation speed */
-    --halo-animation-duration: 2s;
-    
-    /* Customize colors (users can override these) */
-    --status-online-halo: #43b581;
-    --status-offline-halo: #747f8d;
-    --status-idle-halo: #faa61a;
-    --status-dnd-halo: #f04747;
-    --status-invisible-halo: #747f8d;
-    --status-streaming-halo: #7289da;
+    /* Customize stroke colors (users can override these) */
+    --status-online-stroke: #43b581;
+    --status-offline-stroke: #747f8d;
+    --status-idle-stroke: #faa61a;
+    --status-dnd-stroke: #f04747;
+    --status-invisible-stroke: #747f8d;
+    --status-streaming-stroke: #7289da;
 }
