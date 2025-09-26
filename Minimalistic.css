@@ -883,7 +883,7 @@ html.theme-light .mentioned__5126c {
             rgba(228, 228, 228, 0.3),
             rgba(var(--accentcolor), 0.9)
     ) !important;
-    color: #ff0000 !important;
+    color: #cc0000 !important;
 }
 
 html.theme-dark .mentioned__5126c:hover {
@@ -900,7 +900,7 @@ html.theme-light .mentioned__5126c:hover {
             rgba(228, 228, 228, 0.5),
             rgba(var(--accentcolor))
     ) !important;
-    color: #ff0000 !important;
+    color: #cc0000 !important;
 }
 
 /*user popout animation*/
