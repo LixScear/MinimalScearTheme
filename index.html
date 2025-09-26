@@ -20,6 +20,15 @@
             align-items: center;
             justify-content: center;
             line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+        
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: url('CustomizableWallpapers/BD-Night-Lake.gif') center/cover no-repeat fixed;
+                color: #ffffff;
+            }
         }
         
         .container {
@@ -33,6 +42,15 @@
             padding: 60px 40px;
             border: 2px solid rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .container {
+                background: rgba(0, 0, 0, 0.3);
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+            }
         }
         
         h1 {
@@ -42,6 +60,7 @@
             color: #000000;
             letter-spacing: 8px;
             text-transform: uppercase;
+            transition: color 0.3s ease;
         }
         
         .subtitle {
@@ -50,6 +69,17 @@
             color: #333333;
             font-weight: 300;
             letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            h1 {
+                color: #ffffff;
+            }
+            
+            .subtitle {
+                color: #cccccc;
+            }
         }
         
         .theme-info {
@@ -58,6 +88,7 @@
             border-radius: 0;
             padding: 40px;
             margin: 40px 0;
+            transition: all 0.3s ease;
         }
         
         .theme-info h2 {
@@ -66,12 +97,29 @@
             color: #000000;
             font-weight: 300;
             letter-spacing: 1px;
+            transition: color 0.3s ease;
         }
         
         .theme-info p {
             color: #444444;
             font-weight: 300;
             line-height: 1.8;
+            transition: color 0.3s ease;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .theme-info {
+                background: rgba(255, 255, 255, 0.05);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .theme-info h2 {
+                color: #ffffff;
+            }
+            
+            .theme-info p {
+                color: #cccccc;
+            }
         }
         
         .download-btn {
@@ -93,6 +141,19 @@
             background: #ffffff;
             color: #000000;
             transform: translateY(-2px);
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .download-btn {
+                background: #ffffff;
+                color: #000000;
+                border: 2px solid #ffffff;
+            }
+            
+            .download-btn:hover {
+                background: #000000;
+                color: #ffffff;
+            }
         }
         
         .features {
@@ -121,12 +182,34 @@
             font-weight: 300;
             font-size: 1.1rem;
             letter-spacing: 1px;
+            transition: color 0.3s ease;
         }
         
         .feature p {
             color: #333333;
             font-weight: 300;
             line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .feature {
+                background: rgba(255, 255, 255, 0.03);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .feature:hover {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: rgba(255, 255, 255, 0.3);
+            }
+            
+            .feature h3 {
+                color: #ffffff;
+            }
+            
+            .feature p {
+                color: #cccccc;
+            }
         }
         
         .author-info {
@@ -136,10 +219,19 @@
             color: #666666;
             font-weight: 300;
             letter-spacing: 1px;
+            transition: all 0.3s ease;
         }
         
         .author-info p {
             margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            .author-info {
+                border-top: 2px solid rgba(255, 255, 255, 0.1);
+                color: #aaaaaa;
+            }
         }
         
         @media (max-width: 768px) {
@@ -196,7 +288,7 @@
 
         <div class="author-info">
             <p><strong>Author:</strong> L i x S c e a r</p>
-            <p><strong>Version:</strong> 4.0.0</p>
+            <p><strong>Version:</strong> 5.0.0</p>
             <p>Made with precision for... Myself.</p>
         </div>
     </div>
