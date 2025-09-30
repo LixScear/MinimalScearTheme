@@ -2641,12 +2641,23 @@ html.theme-light .fieldSpacerBottom__1fed1 {
     backdrop-filter: blur(15px) !important;
 }
 
+/* Light mode dropdown background */
+html.theme-light .popout__3f413 {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+}
+
 .option__3f413 {
     background: transparent !important;
 }
 
 .option__3f413:hover {
     background-color: rgba(78, 80, 88, 0.3) !important;
+}
+
+/* Light mode dropdown options */
+html.theme-light .option__3f413:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Role picker item background */
@@ -2659,6 +2670,12 @@ html.theme-light .fieldSpacerBottom__1fed1 {
 .container__3dde2 {
     border-radius: 8px;
     background-color: #18191ba6;
+    backdrop-filter: blur(15px) !important;
+}
+
+/* Light mode role picker background */
+html.theme-light .container__3dde2 {
+    background-color: rgba(255, 255, 255, 0.6) !important;
     backdrop-filter: blur(15px) !important;
 }
 
