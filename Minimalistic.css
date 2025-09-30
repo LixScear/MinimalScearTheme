@@ -2520,16 +2520,19 @@ html.theme-light .container__01ae2 {
 /* quickswitch light theme fix*/
 html.theme-light .quickswitcher_ac6cb0 {
     background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px) !important;
 }
 
 /*popup light theme fix*/
 html.theme-light .root__49fc1 {
     background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px) !important;
 }
 
 /*recent activity memberlist popout light theme fix*/
 html.theme-light .popout_af3b89 {
     background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px) !important;
 }
 
 /* patch text color */
@@ -2635,7 +2638,7 @@ html.theme-light .fieldSpacerBottom__1fed1 {
 /* Dropdown background */
 .popout__3f413 {
     background: #18191ba6 !important;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
 }
 
 .option__3f413 {
@@ -2656,7 +2659,7 @@ html.theme-light .fieldSpacerBottom__1fed1 {
 .container__3dde2 {
     border-radius: 8px;
     background-color: #18191ba6;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
 }
 
 /* Remove descriptions from status selector menu */
@@ -2669,7 +2672,7 @@ html.theme-light .fieldSpacerBottom__1fed1 {
 .quickswitcher_ac6cb0, .root__49fc1 {
     border-radius: 8px;
     background-color: #18191ba6;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) !important;
 }
 
 /* bottom bar */
