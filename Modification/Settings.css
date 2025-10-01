@@ -599,3 +599,21 @@ html.theme-light .children__7bffb .buttonContainer_d286c5 .critical-secondary__6
 .children__7bffb .buttonContainer_d286c5 .critical-primary__6af3a:hover, .children__7bffb .buttonContainer_d286c5 .critical-secondary__6af3a:hover {
     box-shadow: 0px 15px 20px rgba(229, 46, 46, 0.4);
 }
+
+/* Discord link styling for light theme */
+html.theme-light a[href*="discord.com"],
+html.theme-light a[href*="discord.gg"],
+html.theme-light .anchor_c8ddc0,
+html.theme-light .anchor-1MIwyf {
+    color: #000000 !important;
+    background-color: transparent !important;
+}
+
+/* Discord link hover effect for light theme */
+html.theme-light a[href*="discord.com"]:hover,
+html.theme-light a[href*="discord.gg"]:hover,
+html.theme-light .anchor_c8ddc0:hover,
+html.theme-light .anchor-1MIwyf:hover {
+    color: #0066cc !important;
+    text-decoration: underline !important;
+}
