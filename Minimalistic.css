@@ -915,18 +915,18 @@ html.theme-light .mentioned__5126c:hover [data-user-id] * {
     color: #404040 !important;
 }
 
-/* General mention text color for all users */
-html.theme-light [class*="mention"],
-html.theme-light [class*="mention"] *,
-html.theme-light [data-user-id],
-html.theme-light [data-user-id] * {
+/* General mention text color for all users - exclude channel links */
+html.theme-light [class*="mention"]:not([href*="discord.com/channels/"]),
+html.theme-light [class*="mention"]:not([href*="discord.com/channels/"]) *,
+html.theme-light [data-user-id]:not([href*="discord.com/channels/"]),
+html.theme-light [data-user-id]:not([href*="discord.com/channels/"]) * {
     color: #404040 !important;
 }
 
-html.theme-dark [class*="mention"],
-html.theme-dark [class*="mention"] *,
-html.theme-dark [data-user-id],
-html.theme-dark [data-user-id] * {
+html.theme-dark [class*="mention"]:not([href*="discord.com/channels/"]),
+html.theme-dark [class*="mention"]:not([href*="discord.com/channels/"]) *,
+html.theme-dark [data-user-id]:not([href*="discord.com/channels/"]),
+html.theme-dark [data-user-id]:not([href*="discord.com/channels/"]) * {
     color: #404040 !important;
 }
 
