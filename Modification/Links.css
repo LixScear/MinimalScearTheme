@@ -21,6 +21,8 @@
     --link-docker: #2496ed;
     --link-kubernetes: #326ce5;
     --link-tailwind: #06b6d4;
+    --link-discord: #000000;
+    --link-discord-hover: #0066cc;
 }
 
 /* Dark mode colors */
@@ -43,6 +45,8 @@
         --link-docker: #2496ed;
         --link-kubernetes: #326ce5;
         --link-tailwind: #06b6d4;
+        --link-discord: #7eabff;
+        --link-discord-hover: #9bc4ff;
     }
 }
 
@@ -138,4 +142,21 @@
 /* Tailwind CSS */
 [href*="tailwindcss.com"] {
     color: var(--link-tailwind) !important;
+}
+
+/* Discord Links */
+[href*="discord.com"],
+[href*="discord.gg"],
+.anchor_c8ddc0,
+.anchor-1MIwyf {
+    color: var(--link-discord) !important;
+}
+
+/* Discord link hover effect */
+[href*="discord.com"]:hover,
+[href*="discord.gg"]:hover,
+.anchor_c8ddc0:hover,
+.anchor-1MIwyf:hover {
+    color: var(--link-discord-hover) !important;
+    text-decoration: underline !important;
 }
