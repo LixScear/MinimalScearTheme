@@ -162,3 +162,17 @@
     background-color: transparent !important;
     text-decoration: underline !important;
 }
+
+/* Discord channel links - TESTING: Full red styling */
+[href*="discord.com/channels/"] {
+    color: #ff0000 !important;
+    background-color: #ff0000 !important;
+    text-decoration: none !important;
+}
+
+/* Discord channel link hover effect - TESTING: Full red styling */
+[href*="discord.com/channels/"]:hover {
+    color: #ff0000 !important;
+    background-color: #ff0000 !important;
+    text-decoration: underline !important;
+}

@@ -617,3 +617,31 @@ html.theme-light .anchor-1MIwyf:hover {
     color: #0066cc !important;
     text-decoration: underline !important;
 }
+
+/* Discord channel link styling for light theme - TESTING: Full red */
+html.theme-light a[href*="discord.com/channels/"] {
+    color: #ff0000 !important;
+    background-color: #ff0000 !important;
+    text-decoration: none !important;
+}
+
+/* Discord channel link hover effect for light theme - TESTING: Full red */
+html.theme-light a[href*="discord.com/channels/"]:hover {
+    color: #ff0000 !important;
+    background-color: #ff0000 !important;
+    text-decoration: underline !important;
+}
+
+/* Discord channel link styling for dark theme - TESTING: Full red */
+html.theme-dark a[href*="discord.com/channels/"] {
+    color: #ff0000 !important;
+    background-color: #ff0000 !important;
+    text-decoration: none !important;
+}
+
+/* Discord channel link hover effect for dark theme - TESTING: Full red */
+html.theme-dark a[href*="discord.com/channels/"]:hover {
+    color: #ff0000 !important;
+    background-color: #ff0000 !important;
+    text-decoration: underline !important;
+}
