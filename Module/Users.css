@@ -536,6 +536,26 @@ html.theme-light #vc-spotify-player {
     background-color: transparent !important;
 }
 
+/* Ensure voice control buttons (mute, deafen, input options) are visible */
+.container_e131a9 button,
+.wrapper_e131a9 button,
+.container_e131a9 button *,
+.wrapper_e131a9 button *,
+.container_e131a9 [class*="button"],
+.wrapper_e131a9 [class*="button"],
+.container_e131a9 [class*="control"],
+.wrapper_e131a9 [class*="control"],
+.container_e131a9 [aria-label*="Mute"],
+.container_e131a9 [aria-label*="Deafen"],
+.container_e131a9 [aria-label*="input"],
+.wrapper_e131a9 [aria-label*="Mute"],
+.wrapper_e131a9 [aria-label*="Deafen"],
+.wrapper_e131a9 [aria-label*="input"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+
 /* Profile panel */
 .container__37e49 {
     order: 10;
