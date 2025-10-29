@@ -93,20 +93,26 @@ html.theme-light .sidebar_c48ade .content__99f8c:after {
    ============================================ */
 
 /* Hide all immediate children by default */
+/* COMMENTED OUT - Was causing mute, deafen, and input options to go invisible
 .panels_c48ade .buttons__37e49 > * {
     opacity: 0;
     transition: all 0.3s;
 }
+*/
 
 /* Make the second-to-last child (settings icon) visible by default */
+/* COMMENTED OUT - Was causing mute, deafen, and input options to go invisible
 .panels_c48ade .buttons__37e49 > :nth-last-child(2) {
     opacity: 1;
 }
+*/
 
 /* When hovering over the container, show all children */
+/* COMMENTED OUT - Was causing mute, deafen, and input options to go invisible
 .panels_c48ade .buttons__37e49:hover > * {
     opacity: 1;
 }
+*/
 
 /* Hide settings sections by default */
 .settings-modal .settings-section > * {
