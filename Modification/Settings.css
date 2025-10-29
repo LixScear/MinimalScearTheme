@@ -684,3 +684,24 @@ html.theme-dark .markup__75297 a[href*="discord.com/channels/"] *,
 html.theme-dark .embed__623de a[href*="discord.com/channels/"] * {
     color: #ff0000 !important;
 }
+
+/* Discord channel mentions - TESTING: Full red styling */
+/* Channel mentions use class names with "mention" and data-channel-id */
+html.theme-light [class*="mention"][data-channel-id],
+html.theme-light [class*="channelMention"],
+html.theme-light [data-channel-id],
+html.theme-dark [class*="mention"][data-channel-id],
+html.theme-dark [class*="channelMention"],
+html.theme-dark [data-channel-id] {
+    color: #ff0000 !important;
+    background-color: #ff0000 !important;
+}
+
+html.theme-light [class*="mention"][data-channel-id] *,
+html.theme-light [class*="channelMention"] *,
+html.theme-light [data-channel-id] *,
+html.theme-dark [class*="mention"][data-channel-id] *,
+html.theme-dark [class*="channelMention"] *,
+html.theme-dark [data-channel-id] * {
+    color: #ff0000 !important;
+}
