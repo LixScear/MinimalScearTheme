@@ -609,39 +609,11 @@ html.theme-light .anchor-1MIwyf {
     background-color: transparent !important;
 }
 
-/* Discord channel link styling for light theme */
-html.theme-light a[href*="discord.com/channels/"] {
-    color: #000000 !important;
-    background-color: transparent !important;
-    text-decoration: none !important;
-}
-
 /* Discord link hover effect for light theme - exclude channel links */
 html.theme-light a[href*="discord.com"]:not([href*="discord.com/channels/"]):hover,
 html.theme-light a[href*="discord.gg"]:hover,
 html.theme-light .anchor_c8ddc0:hover,
 html.theme-light .anchor-1MIwyf:hover {
     color: #0066cc !important;
-    text-decoration: underline !important;
-}
-
-/* Discord channel link hover effect for light theme */
-html.theme-light a[href*="discord.com/channels/"]:hover {
-    color: #0066cc !important;
-    background-color: transparent !important;
-    text-decoration: underline !important;
-}
-
-/* Discord channel link styling for dark theme */
-html.theme-dark a[href*="discord.com/channels/"] {
-    color: #ffffff !important;
-    background-color: transparent !important;
-    text-decoration: none !important;
-}
-
-/* Discord channel link hover effect for dark theme */
-html.theme-dark a[href*="discord.com/channels/"]:hover {
-    color: #ffffff !important;
-    background-color: transparent !important;
     text-decoration: underline !important;
 }

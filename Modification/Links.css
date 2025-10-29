@@ -153,25 +153,11 @@
     background-color: transparent !important;
 }
 
-/* Discord channel links - specific styling */
-[href*="discord.com/channels/"] {
-    color: #000000 !important;
-    background-color: transparent !important;
-    text-decoration: none !important;
-}
-
 /* Discord link hover effect - exclude channel links */
 [href*="discord.com"]:not([href*="discord.com/channels/"]):hover,
 [href*="discord.gg"]:hover,
 .anchor_c8ddc0:hover,
 .anchor-1MIwyf:hover {
-    color: var(--link-discord-hover) !important;
-    background-color: transparent !important;
-    text-decoration: underline !important;
-}
-
-/* Discord channel link hover effect */
-[href*="discord.com/channels/"]:hover {
     color: var(--link-discord-hover) !important;
     background-color: transparent !important;
     text-decoration: underline !important;
