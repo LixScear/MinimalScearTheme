@@ -43,16 +43,16 @@
    ============================================ */
 
 /* Server list sidebar */
-.sidebarListRounded_c48ade {
+/* .sidebarListRounded_c48ade {
     backdrop-filter: blur(var(--blur-medium)) !important;
     background: var(--transparency-medium) !important;
-}
+} */
 
 /* Channel list sidebar */
-.sidebar_c48ade {
+/* .sidebar_c48ade {
     backdrop-filter: blur(var(--blur-medium)) !important;
     background: var(--transparency-medium) !important;
-}
+} */
 
 /* ============================================
    CHAT AREA BLUR EFFECTS
