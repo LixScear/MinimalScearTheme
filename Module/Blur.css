@@ -31,12 +31,12 @@
    ============================================ */
 
 /* Main app mount with background and blur */
-.appMount-3lHmkl {
+/* .appMount-3lHmkl {
     background: var(--background-image) !important;
     background-size: cover !important;
     background-position: center !important;
     backdrop-filter: blur(var(--blur-medium)) !important;
-}
+} */
 
 /* ============================================
    SIDEBAR BLUR EFFECTS
