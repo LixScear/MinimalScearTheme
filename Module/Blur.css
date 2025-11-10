@@ -27,34 +27,6 @@
 }
 
 /* ============================================
-   MAIN APP BACKGROUND & BLUR
-   ============================================ */
-
-/* Main app mount with background and blur */
-/* .appMount-3lHmkl {
-    background: var(--background-image) !important;
-    background-size: cover !important;
-    background-position: center !important;
-    backdrop-filter: blur(var(--blur-medium)) !important;
-} */
-
-/* ============================================
-   SIDEBAR BLUR EFFECTS
-   ============================================ */
-
-/* Server list sidebar */
-/* .sidebarListRounded_c48ade {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-} */
-
-/* Channel list sidebar */
-/* .sidebar_c48ade {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-} */
-
-/* ============================================
    CHAT AREA BLUR EFFECTS
    ============================================ */
 
@@ -154,6 +126,28 @@
 }
 
 /* ============================================
+   SERVER CHANNEL LIST BLUR EFFECTS
+   ============================================ */
+
+/* Server channel list sidebar */
+.sidebar_c48ade {
+    backdrop-filter: blur(var(--blur-medium)) !important;
+    background: var(--transparency-medium) !important;
+}
+
+/* Channel list container */
+.container__2637a {
+    backdrop-filter: blur(var(--blur-medium)) !important;
+    background: var(--transparency-medium) !important;
+}
+
+/* Sidebar list rounded container */
+.sidebarListRounded_c48ade {
+    backdrop-filter: blur(var(--blur-medium)) !important;
+    background: var(--transparency-medium) !important;
+}
+
+/* ============================================
    LIGHT THEME ADJUSTMENTS
    ============================================ */
 
@@ -162,7 +156,8 @@
 .theme-light .sidebar_c48ade,
 .theme-light .panels_c48ade,
 .theme-light .container__37e49,
-.theme-light .membersWrap-3NUR2t {
+.theme-light .membersWrap-3NUR2t,
+.theme-light .container__2637a {
     background: var(--transparency-light-medium) !important;
 }
 
