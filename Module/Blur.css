@@ -67,100 +67,10 @@
 }
 
 /* ============================================
-   CONTAINER BLUR EFFECTS
-   ============================================ */
-
-/* Modal containers */
-.container_ac6cb0, 
-.zoomedCarouselModalRoot_f74404 {
-    backdrop-filter: blur(var(--blur-heavy)) !important;
-    background: var(--transparency-heavy) !important;
-}
-
-/* Settings modal */
-.settings-modal {
-    backdrop-filter: blur(var(--blur-heavy)) !important;
-    background: var(--transparency-heavy) !important;
-}
-
-/* ============================================
-   WINDOW CONTROL BLUR EFFECTS
-   ============================================ */
-
-/* Window control buttons */
-.winButtons_c38106 > div {
-    backdrop-filter: blur(var(--blur-light)) !important;
-    background: var(--transparency-light) !important;
-}
-
-/* Window control buttons hover */
-.winButtons_c38106 > div:hover {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-}
-
-/* ============================================
-   MAIN CONTAINER BLUR EFFECTS
-   ============================================ */
-
-/* Main panels */
-.panels_c48ade {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-}
-
-/* User controls */
-.container__37e49 {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-}
-
-/* ============================================
-   MEMBER LIST BLUR EFFECTS
-   ============================================ */
-
-/* Member list container */
-.membersWrap-3NUR2t {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-}
-
-/* ============================================
-   SERVER CHANNEL LIST BLUR EFFECTS
-   ============================================ */
-
-/* Server channel list sidebar */
-.sidebar_c48ade {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-}
-
-/* Channel list container */
-.container__2637a {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-}
-
-/* Sidebar list rounded container */
-.sidebarListRounded_c48ade {
-    backdrop-filter: blur(var(--blur-medium)) !important;
-    background: var(--transparency-medium) !important;
-}
-
-/* ============================================
    LIGHT THEME ADJUSTMENTS
    ============================================ */
 
-/* Light theme transparency overrides */
-.theme-light .sidebarListRounded_c48ade,
-.theme-light .sidebar_c48ade,
-.theme-light .panels_c48ade,
-.theme-light .container__37e49,
-.theme-light .membersWrap-3NUR2t,
-.theme-light .container__2637a {
-    background: var(--transparency-light-medium) !important;
-}
-
+/* Light theme transparency overrides for chat */
 .theme-light .chat_f75fb0,
 .theme-light .chat-3bRxxu,
 .theme-light .chat__52833,
@@ -173,18 +83,4 @@
 .theme-light .content_c48ade,
 .theme-light .container_c48ade {
     background: var(--transparency-light-light) !important;
-}
-
-.theme-light .container_ac6cb0,
-.theme-light .zoomedCarouselModalRoot_f74404,
-.theme-light .settings-modal {
-    background: var(--transparency-light-heavy) !important;
-}
-
-.theme-light .winButtons_c38106 > div {
-    background: var(--transparency-light-light) !important;
-}
-
-.theme-light .winButtons_c38106 > div:hover {
-    background: var(--transparency-light-medium) !important;
 }
