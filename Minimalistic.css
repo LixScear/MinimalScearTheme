@@ -1129,6 +1129,16 @@ div[class*="wrapper__44b0c"][aria-label*="Online"]
     background-position: var(--background-position, center) !important;
 }
 
+/* Exclude server list from background opacity */
+.bg__960e4 .guilds_c48ade,
+.bg__960e4 .wrapper_ef3116,
+.bg__960e4 .tree_ef3116,
+.bg__960e4 .itemsContainer_ef3116,
+.bg__960e4 .stack_dbd263,
+.bg__960e4 .wrapper_cc5dd2 {
+    opacity: 1 !important;
+}
+
 /*remove those annoying shadow on top of the chats*/
 .searchBar__35e86,
 .header_f37cb1 {
